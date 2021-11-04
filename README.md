@@ -41,9 +41,11 @@ https://www.figma.com/file/mO2nREHeSQXBtYkQ0qOFKq/movie?node-id=0%3A1
 react project 생성 문제로 따로 관리 서로 fork 후 수정 사항 있을 시 PR로 관리
 
 직원 사이트 레포지토리 ⏱
+
 https://github.com/nahyun27/PrimaryKey-FrontEnd-Employee
 
 일반 영화관 사이트 레포지토리 🍿
+
 https://github.com/kimdaye77/PrimaryKey-FrontEnd-Movie
 
 ### JS
