@@ -71,3 +71,8 @@ https://github.com/kimdaye77/PrimaryKey-FrontEnd-Movie
 - /employee/request -> 휴가요청
 - /employee/employee-id-> 특정 직원 출퇴근 기록
 - /employee/employee-id/leaveleft -> 남은 휴가
+
+### API 목록
+
+- https://docs.google.com/spreadsheets/d/1YTooCBynJaHR9CsboMZq0sAcjNm9nCS0vJfgmNTIfa4/edit?usp=sharing
+
