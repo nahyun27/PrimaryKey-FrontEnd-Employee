@@ -9,9 +9,11 @@ p {
 
 body {
   margin: 0;
+  padding-top: 70px;
 }
 
 a {
   text-decoration: none;
   color: #121212;
 }
+

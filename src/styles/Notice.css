@@ -40,13 +40,13 @@ ul, li{
   margin: 0 auto; /*가운데 정렬*/
 }
 
-#ulTable {
+.ulTable {
 margin-top:10px;
 margin-bottom:10px;
 }
 
 
-#ulTable > li:first-child > ul > li {
+.ulTable > li:first-child > ul > li {
   background-color:#F5f6f9;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -57,13 +57,13 @@ margin-bottom:10px;
   font-size: 1.1em;
 }
 
-#ulTable > li > ul {
+.ulTable > li > ul {
   vertical-align: middle;
   clear: both;
   padding: 0px auto;
   min-width: 40px;
 }
-#ulTable > li > ul > li {
+.ulTable > li > ul > li {
   height: 30px;
   float: left;
   font-size: 1em;
@@ -75,11 +75,11 @@ margin-bottom:10px;
   background-color: #ffffff;
 }
 
-#ulTable > li > ul > li:first-child               {width:10%;} /*No 열 크기*/
-#ulTable > li > ul > li:first-child +li           {width:40%;} /*제목 열 크기*/
-#ulTable > li > ul > li:first-child +li+li        {width:25%;} /*작성일 열 크기*/
-#ulTable > li > ul > li:first-child +li+li+li     {width:15%;} /*작성자 열 크기*/
-#ulTable > li > ul > li:first-child +li+li+li+li  {width:10%;} /*조회수 열 크기*/
+.ulTable > li > ul > li:first-child               {width:10%;} /*No 열 크기*/
+.ulTable > li > ul > li:first-child +li           {width:40%;} /*제목 열 크기*/
+.ulTable > li > ul > li:first-child +li+li        {width:25%;} /*작성일 열 크기*/
+.ulTable > li > ul > li:first-child +li+li+li     {width:15%;} /*작성자 열 크기*/
+.ulTable > li > ul > li:first-child +li+li+li+li  {width:10%;} /*조회수 열 크기*/
 
 #divPaging {
     clear:both;

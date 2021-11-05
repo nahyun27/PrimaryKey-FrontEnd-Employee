@@ -7,55 +7,74 @@ class Home extends Component {
   render(){
     return(
       <div className="Home">
-        <h2 class="dash"> !</h2>
         <div id="mainWrapper">
             <ul>
                 {/* 검색 폼 영역 */}
                 <li id='liSearchOption'>
                     <div>
-                        <select class='selSearchOption top2'>
+                        <select className='selSearchOption top2'>
                             <option value='A'>제목+내용</option>
                             <option value='T'>제목</option>
                             <option value='C'>내용</option>
                         </select>
-                        <input class='top' placeholder="검색어를 입력하세요."/>
-                        <input class='top3'type='button' value='검색'/>
+                        <input className='top' placeholder="검색어를 입력하세요."/>
+                        <input className='top3'type='button' value='검색'/>
                     </div>
                 </li>
                 {/* 게시판 목록 */}
-                <li class="content">
-                  <div class="tops">
-                    <div class="left h3">공지사항</div>
-                    <div class="right h3">
-                      <button type="button" class='writing option' name="button" onclick="location.href='./writing.php'">
+                <li className="content">
+                  <div className="tops">
+                  <div><h2>직원 출퇴근 관리</h2></div>
+                    <div className="right h3">
+                      <button type="button" className='writing option' name="button" onclick="location.href='./writing.php'">
                       글쓰기</button>
                     </div>
                   </div>
-                    <ul id ="ulTable">
+                    <ul className="ulTable-home">
                         <li>
                             <ul>
-                                <li>No</li>
-                                <li>제목</li>
-                                <li>작성일</li>
-                                <li>작성자</li>
-                                <li>조회수</li>
+                                <li>직원</li>
+                                <li>5/월</li>
+                                <li>6/화</li>
+                                <li>7/수</li>
+                                <li>8/목</li>
+                                <li>5/월</li>
+                                <li>6/화</li>
+                                <li>7/수</li>
+                                <li>8/목</li>
+                                <li>5/월</li>
+                                <li>6/화</li>
+                                <li>7/수</li>
+                                <li>8/목</li>
+                                <li>5/월</li>
+                                <li>6/화</li>
                             </ul>
                         </li>
                         {/* 게시물이 출력될 영역 */}
                         <li onclick="location.href='./detailedWriting.php'">
-                            <ul>
-                                <li>1</li>
-                                <li class="left">제목제목제목제목1</li>
-                                <li>2014.07.09</li>
-                                <li>김나모</li>
-                                <li>5</li>
-                            </ul>
+                          <ul>
+                            <li>김나현</li>
+                            <li>9:00<br/>20:00</li>
+                            <li>9:00<br/>20:00</li>
+                            <li>9:00<br/>20:00</li>
+                            <li>9:00<br/>20:00</li>
+                            <li>9:00<br/>20:00</li>
+                            <li>-</li>
+                            <li>-</li>
+                            <li>9:00<br/>20:00</li>
+                            <li>9:00<br/>20:00</li>
+                            <li>9:00<br/>20:00</li>
+                            <li>9:00<br/>20:00</li>
+                            <li>9:00<br/>20:00</li>
+                            <li>-</li>
+                            <li>-</li>
+                          </ul>
                         </li>
                     </ul>
                 </li>
             </ul>
-            <div class="pagination1">
-        			<ul id="paginationBox" class="pagination">
+            <div className="pagination1">
+        			<ul id="paginationBox" className="pagination">
         			</ul>
         		</div>
             <div id="divPaging">

@@ -2,13 +2,7 @@ import logo from '../assets/logo.png';
 import refresh from '../assets/refresh.png';
 import setting from '../assets/setting.png';
 import '../styles/Navigation.css';
-import '../styles/common.css';
-import Home from '../pages/Home.jsx';
-import Request from '../pages/Request.jsx';
-import Vacation from '../pages/Vacation.jsx';
-import Schedule from '../pages/Schedule.jsx';
-import Notice from '../pages/Notice.jsx';
-import {BrowserRouter as Router, Route, NavLink, Switch} from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 import React, {useState, useEffect} from 'react';
 
 function Navigation() {

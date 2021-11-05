@@ -40,13 +40,13 @@ ul, li{
   margin: 0 auto; /*가운데 정렬*/
 }
 
-.ulTable-home {
+.ulTable-request {
 margin-top:10px;
 margin-bottom:10px;
 }
 
 
-.ulTable-home > li:first-child > ul > li {
+.ulTable-request > li:first-child > ul > li {
   background-color:#F5f6f9;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -57,13 +57,14 @@ margin-bottom:10px;
   font-size: 1.1em;
 }
 
-.ulTable-home > li > ul {
+.ulTable-request > li > ul {
   vertical-align: middle;
   clear: both;
   padding: 0px auto;
   min-width: 40px;
 }
-.ulTable-home > li > ul > li {
+
+.ulTable-request > li > ul > li {
   height: 30px;
   float: left;
   font-size: 1em;
@@ -75,19 +76,16 @@ margin-bottom:10px;
   background-color: #ffffff;
 }
 
-.ulTable-home > li > ul > li              {width:9%;} /*No 열 크기*/
-.ulTable-home > li > ul > li+li           {width:6.5%;} /*제목 열 크기*/
-.ulTable-home > li > ul > li+li+li        {width:6.5%;} /*작성일 열 크기*/
-.ulTable-home > li > ul > li+li+li+li     {width:6.5%;} /*작성자 열 크기*/
-.ulTable-home > li > ul > li+li+li+li+li  {width:6.5%;} /*조회수 열 크기*/
-.ulTable-home > li > ul > li+li+li+li+li+li           {width:6.5%;} /*제목 열 크기*/
-.ulTable-home > li > ul > li+li+li+li+li+li+li        {width:6.5%;} /*작성일 열 크기*/
-.ulTable-home > li > ul > li+li+li+li+li+li+li+li     {width:6.5%;} /*작성자 열 크기*/
-.ulTable-home > li > ul > li+li+li+li+li+li+li+li+li  {width:6.5%;} /*조회수 열 크기*/
-
+.ulTable-request > li > ul > li                    {width:10%;} /*요청인 열 크기*/
+.ulTable-request > li > ul > li+li                 {width:15%;} /*요청 종류 열 크기*/
+.ulTable-request > li > ul > li+li+li              {width:25%;} /*요청 사항 크기*/
+.ulTable-request > li > ul > li+li+li+li           {width:10%;} /*요청 사유 크기*/
+.ulTable-request > li > ul > li+li+li+li+li        {width:10%;} /*상태 크기*/
+.ulTable-request > li > ul > li+li+li+li+li+li     {width:15%;} /*신청일자 크기*/
+.ulTable-request > li > ul > li+li+li+li+li+li+li  {width:15%;} /*관리 크기*/
 
 #divPaging {
-    clear:both;
+  clear:both;
   margin:0 auto;
   width:220px;
   height:50px;

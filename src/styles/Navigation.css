@@ -1,3 +1,21 @@
+* {
+  font-family: "Spoqa Han Sans Neo", "sans-serif";
+}
+
+p {
+  text-decoration: none;
+  margin: 0%;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #121212;
+}
+
 .App-logo {
   height: 30px;
   pointer-events: none;
