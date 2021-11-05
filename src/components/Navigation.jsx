@@ -1,7 +1,14 @@
 import logo from '../assets/logo.png';
+import refresh from '../assets/refresh.png';
+import setting from '../assets/setting.png';
 import '../styles/Navigation.css';
 import '../styles/common.css';
-import {BrowserRouter, NavLink} from 'react-router-dom';
+import Home from '../pages/Home.jsx';
+import Request from '../pages/Request.jsx';
+import Vacation from '../pages/Vacation.jsx';
+import Schedule from '../pages/Schedule.jsx';
+import Notice from '../pages/Notice.jsx';
+import {BrowserRouter as Router, Route, NavLink, Switch} from 'react-router-dom';
 import React, {useState, useEffect} from 'react';
 
 function Navigation() {
@@ -16,21 +23,20 @@ function Navigation() {
     return(
       <div className="Navigation">
         <nav className={scrollPosition < 100 ? "navbar" : "change-navbar"}>
-
           <div className="navbar__logo">
             <img src={logo} className="App-logo" alt="logo" />
           </div>
-          
-          <BrowserRouter>
-            <ul className="navbar__menu">
-                <li><NavLink to="/">출퇴근 관리</NavLink></li>
-                <li><NavLink to="/Request">요청 관리</NavLink></li>
-                <li><NavLink to="/Vacation">휴가 관리</NavLink></li>
-                <li><NavLink to="/Schedule">직원 스케줄 관리</NavLink></li>
-                <li><NavLink to="/Notice">건의사항 관리</NavLink></li>
-            </ul>
-          </BrowserRouter>
-
+          <ul className="navbar__menu">
+              <li><NavLink exact to="/">출퇴근 관리</NavLink></li>
+              <li><NavLink exact to="/Request">요청 관리</NavLink></li>
+              <li><NavLink exact to="/Vacation">휴가 관리</NavLink></li>
+              <li><NavLink exact to="/Schedule">직원 스케줄 관리</NavLink></li>
+              <li><NavLink exact to="/Notice">건의사항 관리</NavLink></li>
+          </ul>
+          <div className="navbar__logo">
+            <img src={refresh} className="icon" alt="icon" />
+            <img src={setting} className="icon" alt="icon" />
+          </div>
           <input type="checkbox" id="menuicon"/>
           <label htmlFor="menuicon">
             <span></span>
@@ -38,15 +44,13 @@ function Navigation() {
             <span></span>
           </label>
           <div className="sidebar">
-            <BrowserRouter>
-              <ul className="sidebar__menu">
-                <li><NavLink to="/">출퇴근 관리</NavLink></li>
+            <ul className="sidebar__menu">
+                <li><NavLink exact to="/">출퇴근 관리</NavLink></li>
                 <li><NavLink to="/Request">요청 관리</NavLink></li>
                 <li><NavLink to="/Vacation">휴가 관리</NavLink></li>
                 <li><NavLink to="/Schedule">직원 스케줄 관리</NavLink></li>
                 <li><NavLink to="/Notice">건의사항 관리</NavLink></li>
-              </ul>
-            </BrowserRouter>
+            </ul>
           </div>
         </nav>
       </div>

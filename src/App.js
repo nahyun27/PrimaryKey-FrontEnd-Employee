@@ -6,22 +6,22 @@ import Schedule from './pages/Schedule.jsx';
 import Notice from './pages/Notice.jsx';
 import Footer from './components/Footer.jsx';
 import Navigation from './components/Navigation.jsx';
-import {BrowserRouter, Route, Switch} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
-          <Navigation></Navigation>
+        <Router>
+          <Navigation />
           <Switch>
-            <Route exact path="/"><Home></Home></Route>
-            <Route path="/Request"><Request></Request></Route>
-            <Route path="/Vacation"><Vacation></Vacation></Route>
-            <Route path="/Schedule"><Schedule></Schedule></Route>
-            <Route path="/Notice"><Notice></Notice></Route>
+            <Route path='/' exact component={Home} />
+            <Route path='/Request' exact component={Request} />
+            <Route path='/Vacation' exact component={Vacation} />
+            <Route path='/Schedule' exact component={Schedule} />
+            <Route path='/Notice' exact component={Notice} />
           </Switch>
-          <Footer></Footer>
-        </BrowserRouter>
+        </Router>
+      <Footer />
     </div>
   );
 }

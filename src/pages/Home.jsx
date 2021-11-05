@@ -7,6 +7,7 @@ class Home extends Component {
   render(){
     return(
       <div className="Home">
+        홈입니다.
       </div>
     );
   }

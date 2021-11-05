@@ -6,6 +6,7 @@ class Schedule extends Component {
   render(){
     return(
       <div className="Schedule">
+        스케줄입니다.
       </div>
     );
   }

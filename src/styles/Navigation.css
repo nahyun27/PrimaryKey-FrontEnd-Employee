@@ -1,13 +1,11 @@
 .App-logo {
-  height: 45px;
+  height: 30px;
   pointer-events: none;
 }
 
-.App-logo-writing {
-  height: 40px;
-  pointer-events: none;
-  padding-top: 4px;
-  margin-left: 10px;
+.icon {
+  margin: 5px;
+  height: 20px;
 }
 
 .Navigation {
@@ -62,11 +60,11 @@
 
 .navbar__menu li :hover {
   font-weight: 800;
-  color: coral;
 }
 
-.active { 
+.active {
   font-weight: 800;
+  color: coral;
 }
 
 @media screen and (max-width: 768px) {
@@ -75,7 +73,7 @@
     padding: 0 24px;
   }
 
-  .change-navbar{
+  .change-navbar {
     height: 60px;
     padding: 0 24px;
   }
@@ -148,7 +146,6 @@ input[id="menuicon"]:checked + label span:nth-child(3) {
   transition: all 0.35s;
 }
 
-
 .sidebar__menu {
   display: flex;
   flex-direction: column;
@@ -172,7 +169,6 @@ input[id="menuicon"]:checked + label span:nth-child(3) {
 .sidebar__menu li :hover {
   color: #edff70;
 }
-
 
 input[id="menuicon"]:checked + label + div {
   right: 0;
