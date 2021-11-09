@@ -1,36 +1,49 @@
 import { Component } from 'react';
-import '../styles/Home.css';
 import '../styles/common.css';
-
+import '../styles/board.css';
+import '../styles/Home.css';
 
 class Home extends Component {
   render(){
     return(
       <div className="Home">
-        <div id="mainWrapper">
+        <div className="mainWrapper">
             <ul>
                 {/* 검색 폼 영역 */}
-                <li id='liSearchOption'>
+                <li className='liSearchOption'>
                     <div>
-                        <select className='selSearchOption top2'>
+                        <select className='selSearchOption option'>
                             <option value='A'>제목+내용</option>
                             <option value='T'>제목</option>
                             <option value='C'>내용</option>
                         </select>
                         <input className='top' placeholder="검색어를 입력하세요."/>
-                        <input className='top3'type='button' value='검색'/>
+                        <input className='sear-btn'type='button' value='검색'/>
                     </div>
                 </li>
                 {/* 게시판 목록 */}
                 <li className="content">
                   <div className="tops">
-                  <div><h2>직원 출퇴근 관리</h2></div>
+                    <div><h2>출퇴근 관리</h2></div>
                     <div className="right h3">
-                      <button type="button" className='writing option' name="button" onclick="location.href='./writing.php'">
-                      글쓰기</button>
+
+                      <select class='selSearchOption option'>
+                        <option value='A'>최신순</option>
+                        <option value='T'>게시순</option>
+                      </select>
+
+                      <select class='selSearchOption option'>
+                        <option value='A'>모두</option>
+                        <option value='T'>게임개설</option>
+                        <option value='C'>모집중</option>
+                        <option value='C'>모집완료</option>
+                        <option value='C'>게임확정</option>
+                        <option value='C'>게임완료</option>
+                      </select>
+                      
                     </div>
                   </div>
-                    <ul className="ulTable-home">
+                    <ul className="ulTable ulTable-home">
                         <li>
                             <ul>
                                 <li>직원</li>
@@ -77,7 +90,7 @@ class Home extends Component {
         			<ul id="paginationBox" className="pagination">
         			</ul>
         		</div>
-            <div id="divPaging">
+            <div className="divPaging">
                 <div>◀</div>
                 <div><b>1</b></div>
                 <div>2</div>

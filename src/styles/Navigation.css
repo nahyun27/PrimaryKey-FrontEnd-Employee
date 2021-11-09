@@ -38,19 +38,20 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 18%;
+  padding: 0 15%;
   border: transparent;
   border-bottom: rgb(199, 199, 199);
   border-width: 1px;
   border-style: solid;
 }
+
 .change-navbar {
-  background-color: rgba(38, 38, 38, 0.7);
+  background-color: #ffffff;
   height: 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 18%;
+  padding: 0 15%;
   border: transparent;
   border-bottom: rgb(199, 199, 199);
   border-width: 1px;
@@ -159,7 +160,7 @@ input[id="menuicon"]:checked + label span:nth-child(3) {
   background-color: rgba(38, 38, 38, 0.9);
   position: fixed;
   top: 0%;
-  right: -300px;
+  right: -400px;
   z-index: 1;
   transition: all 0.35s;
 }
