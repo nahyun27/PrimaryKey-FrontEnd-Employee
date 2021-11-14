@@ -2,6 +2,7 @@ import { Component } from 'react';
 import '../styles/common.css';
 import '../styles/board.css';
 import '../styles/Request.css';
+import Paging from '../components/Paging.jsx';
 
 class Request extends Component {
   render(){
@@ -66,15 +67,7 @@ class Request extends Component {
         			<ul id="paginationBox" className="pagination">
         			</ul>
         		</div>
-            <div className="divPaging">
-                <div>◀</div>
-                <div><b>1</b></div>
-                <div>2</div>
-                <div>3</div>
-                <div>4</div>
-                <div>5</div>
-                <div>▶</div>
-            </div>
+            <Paging/>
         </div>
       </div>
     );

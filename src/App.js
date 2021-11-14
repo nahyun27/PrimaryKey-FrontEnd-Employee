@@ -8,6 +8,7 @@ import Footer from './components/Footer.jsx';
 import Navigation from './components/Navigation.jsx';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
+
 function App() {
   return (
     <div className="App">
