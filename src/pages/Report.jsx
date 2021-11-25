@@ -1,13 +1,13 @@
 import { Component } from 'react';
 import '../styles/common.css';
 import '../styles/board.css';
-import '../styles/Vacation.css';
+import '../styles/Notice.css';
 import Paging from '../modules/Paging.jsx';
 
-class Vacation extends Component {
+class Notice extends Component {
   render(){
     return(
-      <div className="Vacation">
+      <div className="Notice">
         <div className="mainWrapper">
             <ul>
                 {/* 검색 폼 영역 */}
@@ -25,16 +25,17 @@ class Vacation extends Component {
                 {/* 게시판 목록 */}
                 <li className="content">
                   <div className="tops">
-                    <div><h2>휴가 관리</h2></div>
+                    <div><h2>건의사항 관리</h2></div>
                     <div className="h3">
 
                       <select class='selSearchOption option'>
                         <option value='A'>최신순</option>
                         <option value='T'>게시순</option>
                       </select>
+                      
                     </div>
                   </div>
-                    <ul className="ulTable ulTable-vacation">
+                    <ul className="ulTable ulTable-notice">
                         <li>
                             <ul>
                               <li>직원</li>
@@ -57,15 +58,19 @@ class Vacation extends Component {
                     </ul>
                 </li>
             </ul>
-            <div className="pagination1">
-        			<ul id="paginationBox" className="pagination">
-        			</ul>
-        		</div>
-            <Paging/>
+            <div className="pagination">
+            {console.log("asdfg", Math.ceil(posts.length / postPerPage))}
+            <Paging
+              postPerPage={postPerPage}
+              totalPosts={posts.length}
+              paginate={paginate}
+              currentPage={currentPage}
+            />
+          </div>
         </div>
       </div>
     );
   }
 }
 
-export default Vacation;
+export default Notice;

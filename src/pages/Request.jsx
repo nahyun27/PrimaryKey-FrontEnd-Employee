@@ -2,7 +2,7 @@ import { Component } from 'react';
 import '../styles/common.css';
 import '../styles/board.css';
 import '../styles/Request.css';
-import Paging from '../components/Paging.jsx';
+import Paging from '../modules/Paging.jsx';
 
 class Request extends Component {
   render(){

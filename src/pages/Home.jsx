@@ -2,7 +2,8 @@ import { Component } from 'react';
 import '../styles/common.css';
 import '../styles/board.css';
 import '../styles/Home.css';
-import Paging from '../components/Paging.jsx';
+import Paging from '../modules/Paging.jsx';
+
 
 class Home extends Component {
     
@@ -67,25 +68,7 @@ class Home extends Component {
                             </ul>
                         </li>
                         {/* 게시물이 출력될 영역 */}
-                        <li onclick="location.href='./detailedWriting.php'">
-                          <ul>
-                            <li>김나현</li>
-                            <li>9:00<br/>20:00</li>
-                            <li>9:00<br/>20:00</li>
-                            <li>9:00<br/>20:00</li>
-                            <li>9:00<br/>20:00</li>
-                            <li>9:00<br/>20:00</li>
-                            <li>-</li>
-                            <li>-</li>
-                            <li>9:00<br/>20:00</li>
-                            <li>9:00<br/>20:00</li>
-                            <li>9:00<br/>20:00</li>
-                            <li>9:00<br/>20:00</li>
-                            <li>9:00<br/>20:00</li>
-                            <li>-</li>
-                            <li>-</li>
-                          </ul>
-                        </li>
+                        
                     </ul>
                 </li>
             </ul>

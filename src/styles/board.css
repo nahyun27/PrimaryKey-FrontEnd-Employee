@@ -43,7 +43,7 @@ ul, li{
 .ulTable > li:first-child > ul > li {
   background-color:#F5f6f9;
   border-bottom:1px solid #121212;
-  border-top:1px solid #121212;
+  border-top: 1px solid #121212;
   font-weight:normal;
   color: #121212;
   font-size: 1.1em;
