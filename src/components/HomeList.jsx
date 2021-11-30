@@ -1,20 +1,16 @@
 import React from 'react';
-import getDateStringGMT9 from '../modules/DateParser';
+import getLightDateString from '../modules/LightDateParser';
 import {NavLink} from 'react-router-dom';
 
 const HomeList = ({posts, loading}) => {
   return (
     Object.keys(posts).map((i) => {
-      console.log("asdf", posts[i].attendant_id)
       return (
-        <NavLink exact to="/DetailedGame">
-          <li key={posts[i].attendant_id}>
-            <ul className="ulTable-inside ulTable-game"> 
-              <li>{posts[i].employee_id}</li>
-              <li>{getDateStringGMT9(new Date(posts[i].time_in))} <br/> {getDateStringGMT9(new Date(posts[i].time_out))}</li>
-            </ul>
-          </li> 
-        </NavLink>
+        <div className="blank" key={posts[i].attendant_id}>
+          {(i% 10 == 0)? <div className="blank"><li>{posts[i].employee_id}</li></div>: ""}
+          <li>{getLightDateString(new Date(posts[i].time_in))} <br/> {getLightDateString(new Date(posts[i].time_out))}</li>
+          {((i+1)% 10 == 0)? <br/> : ''}
+        </div>
       )
     })
   )

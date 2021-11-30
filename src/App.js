@@ -19,7 +19,7 @@ function App() {
         <Router>
           <Navigation />
           <Switch>
-            <Route path='/' exact component={Home} />
+            <Route path='/Home' exact component={Home} />
             <Route path='/Request' exact component={Request} />
             <Route path='/Vacation' exact component={Vacation} />
             <Route path='/Schedule' exact component={Schedule} />
@@ -27,7 +27,7 @@ function App() {
             <Route path='/Meal' exact component={Meal} />
             <Route path='/Notice' exact component={Notice} />
 
-            <Route path='/Login' exact component={Login} />
+            <Route path='/' exact component={Login} />
           </Switch>
         </Router>
       <Footer />

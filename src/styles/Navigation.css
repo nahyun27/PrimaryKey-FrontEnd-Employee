@@ -16,6 +16,12 @@ a {
   color: #121212;
 }
 
+.logout_btn {
+  all: unset;
+  font-size: 1em;
+  cursor: pointer;
+}
+
 .App-logo {
   height: 30px;
   pointer-events: none;

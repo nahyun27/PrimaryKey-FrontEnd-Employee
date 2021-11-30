@@ -1,12 +1,10 @@
 .Footer {
   width: 100vw;
-  height: 20vh;
   background-color: rgb(97, 98, 101);
 }
 
 .contents {
-  margin: 5% 15%;
-  padding-top: 2%;
+  padding: 30px 15%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -16,10 +14,6 @@
   margin: 5px;
   font-size: 14px;
   color: white;
-}
-
-.terms :hover {
-  color: #EDFF70;
 }
 
 @media all and (max-width: 768px) {

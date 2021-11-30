@@ -98,11 +98,11 @@ label h4{
   border: 0;
   outline: none;
   border-radius: 40px;
-  background: linear-gradient(to left, #50b063, #51c83e);
+  background: rgb(217, 94, 72);
   color: white;
-  font-size: 1.2em;
   align-items: center;
   text-align: center;
   letter-spacing: 2px;
   font-size: 1.3em;
+  font-weight: 700;
 }

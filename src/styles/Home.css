@@ -7,3 +7,20 @@
 .ulTable-home > li > ul > li+li+li+li+li+li+li        {width:6.5%;} /*작성일 열 크기*/
 .ulTable-home > li > ul > li+li+li+li+li+li+li+li     {width:6.5%;} /*작성자 열 크기*/
 .ulTable-home > li > ul > li+li+li+li+li+li+li+li+li  {width:6.5%;} /*조회수 열 크기*/
+
+.blank {
+  display: inline-block;
+  align-items: center;
+  
+}
+
+.blank li {
+  display: inline-block;
+  margin: 10px;
+
+}
+
+.blank div {
+  align-self: center;
+  height: 100%;
+}

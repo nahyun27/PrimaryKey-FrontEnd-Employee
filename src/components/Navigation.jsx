@@ -1,11 +1,15 @@
 import logo from '../assets/logo.png';
-import refresh from '../assets/refresh.png';
-import setting from '../assets/setting.png';
 import '../styles/Navigation.css';
 import {NavLink} from 'react-router-dom';
 import React, {useState, useEffect} from 'react';
 
-function Navigation() {
+function Navigation(props) {
+  const onLogout = () => {
+    // sessionStorage 에 user_id 로 저장되어있는 아이템을 삭제한다.
+      sessionStorage.removeItem('login_token')
+      // App 으로 이동(새로고침)
+      document.location.href = '/'
+  }
 
   const [scrollPosition, setScrollPosition] = useState(0);
   const updateScroll = () => {
@@ -21,7 +25,7 @@ function Navigation() {
             <img src={logo} className="App-logo" alt="logo" />
           </div>
           <ul className="navbar__menu">
-            <li><NavLink exact to="/">출퇴근 관리</NavLink></li>
+            <li><NavLink exact to="/Home">출퇴근 관리</NavLink></li>
             <li><NavLink exact to="/Request">요청 관리</NavLink></li>
             <li><NavLink exact to="/Vacation">휴가 관리</NavLink></li>
             <li><NavLink exact to="/Schedule">직원 스케줄 관리</NavLink></li>
@@ -29,9 +33,10 @@ function Navigation() {
             <li><NavLink exact to="/Compliment">우수 직원</NavLink></li>
             <li><NavLink exact to="/Notice">공지사항</NavLink></li>
           </ul>
-          <div className="navbar__logo">
-            <img src={refresh} className="icon" alt="icon" />
-            <img src={setting} className="icon" alt="icon" />
+          <div className="navbar__menu">
+            <button type='button' className="logout_btn" onClick={onLogout}> {props.isLogin ? "로그아웃" : "로그인"} </button>
+            <p className="separator">|</p>
+            {sessionStorage.getItem('login_name')}
           </div>
           <input type="checkbox" id="menuicon"/>
           <label htmlFor="menuicon">
@@ -41,7 +46,7 @@ function Navigation() {
           </label>
           <div className="sidebar">
             <ul className="sidebar__menu">
-              <li><NavLink exact to="/">출퇴근 관리</NavLink></li>
+              <li><NavLink exact to="/Home">출퇴근 관리</NavLink></li>
               <li><NavLink to="/Request">요청 관리</NavLink></li>
               <li><NavLink to="/Vacation">휴가 관리</NavLink></li>
               <li><NavLink to="/Schedule">직원 스케줄 관리</NavLink></li>
