@@ -11,14 +11,32 @@ import Compliment from './pages/Compliment.jsx';
 import Login from './pages/Login.jsx'
 import Footer from './components/Footer.jsx';
 import Navigation from './components/Navigation.jsx';
+import React, {useState, useEffect} from 'react';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 
+
 function App() {
+  const [isLogin, setIsLogin] = useState(false)
+
+  useEffect(() => {
+    if(sessionStorage.getItem('login_token') === null){
+    // sessionStorage 에 user_id 라는 key 값으로 저장된 값이 없다면
+      console.log('isLogin? : ', isLogin)
+    } else {
+    // sessionStorage 에 user_id 라는 key 값으로 저장된 값이 있다면
+    // 로그인 상태 변경
+      setIsLogin(true)
+      console.log('isLogin? : ', isLogin)
+    }
+  })
+
+
   return (
     <div className="App">
         <Router>
-          <Navigation />
+          <Navigation isLogin={isLogin}/>
+          {isLogin ?
           <Switch>
             <Route path='/Home' exact component={Home} />
             <Route path='/Request' exact component={Request} />
@@ -31,6 +49,8 @@ function App() {
 
             <Route path='/' exact component={Login} />
           </Switch>
+          : 
+          <Login />}
         </Router>
       <Footer />
     </div>

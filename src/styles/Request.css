@@ -1,7 +1,17 @@
-.ulTable-request > li > ul > li                    {width:10%;} /*요청인 열 크기*/
-.ulTable-request > li > ul > li+li                 {width:15%;} /*요청 종류 열 크기*/
-.ulTable-request > li > ul > li+li+li              {width:25%;} /*요청 사항 크기*/
-.ulTable-request > li > ul > li+li+li+li           {width:10%;} /*요청 사유 크기*/
-.ulTable-request > li > ul > li+li+li+li+li        {width:10%;} /*상태 크기*/
-.ulTable-request > li > ul > li+li+li+li+li+li     {width:15%;} /*신청일자 크기*/
-.ulTable-request > li > ul > li+li+li+li+li+li+li  {width:15%;} /*관리 크기*/
+.ulTable-request > li                    {width:10%;} /*요청인 열 크기*/
+.ulTable-request > li+li                 {width:15%;} /*요청 종류 열 크기*/
+.ulTable-request > li+li+li              {width:25%;} /*요청 사항 크기*/
+.ulTable-request > li+li+li+li           {width:10%;} /*요청 사유 크기*/
+.ulTable-request > li+li+li+li+li        {width:10%;} /*상태 크기*/
+.ulTable-request > li+li+li+li+li+li     {width:15%;} /*신청일자 크기*/
+.ulTable-request > li+li+li+li+li+li+li  {width:15%;} /*관리 크기*/
+
+.btn-req {
+  padding: 4px 10px;
+  border-radius: 10px;
+  margin-left: 10px;
+  border: 1px solid #aaaaaa;
+  font-size: 0.9em;
+  background-color: #f5f6f9;
+  cursor: pointer;
+}

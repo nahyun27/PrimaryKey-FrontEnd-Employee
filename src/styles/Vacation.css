@@ -1,5 +1,5 @@
-.ulTable-vacation > li > ul > li              {width:10%;} /*No 열 크기*/
-.ulTable-vacation > li > ul > li+li           {width:40%;} /*제목 열 크기*/
-.ulTable-vacation > li > ul > li+li+li        {width:25%;} /*작성일 열 크기*/
-.ulTable-vacation > li > ul > li+li+li+li     {width:15%;} /*작성자 열 크기*/
-.ulTable-vacation > li > ul > li+li+li+li+li  {width:10%;} /*조회수 열 크기*/
+.ulTable-vacation > li              {width:10%;} /*No 열 크기*/
+.ulTable-vacation > li+li           {width:40%;} /*제목 열 크기*/
+.ulTable-vacation > li+li+li        {width:25%;} /*작성일 열 크기*/
+.ulTable-vacation > li+li+li+li     {width:15%;} /*작성자 열 크기*/
+.ulTable-vacation > li+li+li+li+li  {width:10%;} /*조회수 열 크기*/

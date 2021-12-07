@@ -1,11 +1,17 @@
-.ulTable-comliment > li              {width:20%;} /*No 열 크기*/
-.ulTable-comliment > li+li           {width:10%;} /*제목 열 크기*/
-.ulTable-comliment > li+li+li        {width:40%;} /*작성일 열 크기*/
-.ulTable-comliment > li+li+li+li     {width:10%;} /*작성일 열 크기*/
-.ulTable-comliment > li+li+li+li+li  {width:20%;} /*작성일 열 크기*/
+.ulTable-compliment > li              {width:20%;} /*No 열 크기*/
+.ulTable-compliment > li+li           {width:10%;} /*제목 열 크기*/
+.ulTable-compliment > li+li+li        {width:40%;} /*작성일 열 크기*/
+.ulTable-compliment > li+li+li+li     {width:10%;} /*작성일 열 크기*/
+.ulTable-compliment > li+li+li+li+li  {width:20%;} /*작성일 열 크기*/
+
+
 .rank-img {
   padding-left: 5px;
   height: 40px;
+}
+.rank-img1 {
+  padding-left: 5px;
+  height: 30px;
 }
 
 .ranks {
@@ -27,6 +33,7 @@
 }
 
 .rank {
+  height: 30%;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -39,4 +46,19 @@
   width: 30%;
   font-size: 1.2em;
   font-weight: 600;
+}
+
+.compli-contents {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.ul-compli {
+  height: 50%;
+  margin-top: 10px;
+}
+
+.middle-compli {
+  margin-top: 20px;
 }

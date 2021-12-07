@@ -17,7 +17,7 @@ import six from '../assets/six.png';
 function Compliment(){
   const [posts, setPosts] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const [postPerPage] = useState(12);
+  const [postPerPage] = useState(8);
 
   useEffect(() => {
     const fetchPosts = async () => {
@@ -25,8 +25,7 @@ function Compliment(){
         headers: { Authorization: sessionStorage.getItem("login_token")}
       })
 
-      console.log(res);
-      var data_ = res.data.compliimentE
+      var data_ = res.data.complimentE
       setPosts(data_);
       
     }
@@ -50,52 +49,54 @@ function Compliment(){
             <div className="tops">
               <h2>실시간 우수 직원 순위</h2>
             </div>
-            <div className="meal-contents">
+            <div className="compli-contents">
               <div className="ranks">
                 <div className="rank-half">
                   <div className="rank">
                     <img src={first} className="rank-img" alt=""/>
                     <p>하혜민</p>
                     <p>경영지원부</p>
-                    <p>받은 칭찬 횟수 : 16회</p>
+                    <p>받은 칭찬: 16회</p>
                   </div>
                   <div className="rank">
                     <img src={second} className="rank-img" alt=""/>
                     <p>박창선</p>
                     <p>경영지원부</p>
-                    <p>받은 칭찬 횟수 : 11회</p>
+                    <p>받은 칭찬: 11회</p>
                   </div>
                   <div className="rank">
                     <img src={third} className="rank-img" alt=""/>
                     <p>정종문</p>
                     <p>경영지원부</p>
-                    <p>받은 칭찬 횟수 : 10회</p>
+                    <p>받은 칭찬: 10회</p>
                   </div>
                 </div>
 
                 <div className="rank-half">
                   <div className="rank">
-                    <img src={first} className="rank-img" alt=""/>
+                    <img src={four} className="rank-img1" alt=""/>
                     <p>김나현</p>
                     <p>경영지원부</p>
-                    <p>받은 칭찬 횟수 : 8회</p>
+                    <p>받은 칭찬: 8회</p>
                   </div>
                   <div className="rank">
-                    <img src={second} className="rank-img" alt=""/>
+                    <img src={five} className="rank-img1" alt=""/>
                     <p>김다예</p>
                     <p>물품관리부</p>
-                    <p>받은 칭찬 횟수 : 6회</p>
+                    <p>받은 칭찬: 6회</p>
                   </div>
                   <div className="rank">
-                    <img src={third} className="rank-img" alt=""/>
+                    <img src={six} className="rank-img1" alt=""/>
                     <p>홍길동</p>
                     <p>총무부</p>
-                    <p>받은 칭찬 횟수 : 5회</p>
+                    <p>받은 칭찬: 5회</p>
                   </div>
                 </div>
               </div>
-            </div>
-              <ul className="ulTable">
+              <div className="middle-compli">
+                <h3>칭찬 게시판</h3>
+              </div>
+              <ul className="ulTable ul-compli">
                   <li>
                       <ul className="ulTable-inside ulTable-compliment">
                           <li>No</li>
@@ -107,6 +108,7 @@ function Compliment(){
                   </li>
                   <ComplimentList posts={currentPosts}/>
               </ul>
+            </div>
           </li>
         </ul>
         <div className="pagination">

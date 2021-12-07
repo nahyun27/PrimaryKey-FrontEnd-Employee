@@ -2,13 +2,13 @@ import React from 'react';
 import getDateStringGMT9 from '../modules/DateParser';
 import {NavLink} from 'react-router-dom';
 
-const ScheduleList = ({posts, loading}) => {
+const VacationList = ({posts, loading}) => {
   return (
     Object.keys(posts).map((i) => {
       console.log("asdf", posts[i])
       return (
         <NavLink to={{
-          pathname:"/DetailedSchedule",
+          pathname:"/DetailedVacation",
           aboutProps:{
             post : posts[i]
           }
@@ -30,4 +30,4 @@ const ScheduleList = ({posts, loading}) => {
   )
 }
 
-export default ScheduleList;
+export default VacationList;
