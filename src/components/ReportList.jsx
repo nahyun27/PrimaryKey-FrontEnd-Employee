@@ -1,24 +1,26 @@
 import React from 'react';
 import getDateStringGMT9 from '../modules/DateParser';
 import {NavLink} from 'react-router-dom';
-import TimeList from './TimeList.jsx';
 
-const ScheduleList = ({posts, loading}) => {
+const ReportList = ({posts}) => {
   return (
     Object.keys(posts).map((i) => {
       console.log("asdf", posts[i])
       return (
         <NavLink to={{
-          pathname:"/DetailedSchedule",
+          pathname:"/DetailedReport",
           aboutProps:{
             post : posts[i]
           }
         }}
         exact>
-          <li key={posts[i].schedule_id}>
-            <ul className="ulTable-inside ulTable-request"> 
+          <li key={posts[i].suggestion_id}>
+            <ul className="ulTable-inside ulTable-report"> 
+              <li>{posts[i].suggestion_id}</li>
+              <li>{posts[i].suggestion_type}</li>
+              <li>{posts[i].title}</li>
+              <li>{getDateStringGMT9(new Date(posts[i].created_at))}</li>
               <li>{posts[i].employee.name}</li>
-              <TimeList posts={posts[i]}/>
             </ul>
           </li> 
         </NavLink>
@@ -27,4 +29,5 @@ const ScheduleList = ({posts, loading}) => {
   )
 }
 
-export default ScheduleList;
+export default ReportList;
+

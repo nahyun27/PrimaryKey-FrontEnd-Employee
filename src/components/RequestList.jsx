@@ -1,8 +1,18 @@
 import React from 'react';
 import getDateStringGMT9 from '../modules/DateParser';
 import {NavLink} from 'react-router-dom';
+import getStatus from '../modules/StatusParser';
+import getType from '../modules/TypeParser';
+
 
 const RequestList = ({posts, loading}) => {
+  const onOkHandler = () => {
+    alert('승인되었습니다.')
+  }
+  const onNoHandler = () => {
+    alert("거절되었습니다.")
+  }
+
   return (
     Object.keys(posts).map((i) => {
       console.log("asdf", posts[i])
@@ -15,16 +25,18 @@ const RequestList = ({posts, loading}) => {
         }}
         exact>
           <li key={posts[i].request_id}>
-            <ul className="ulTable-inside ulTable-request"> 
-              <li>{posts[i].request_id}</li>
-              <li>{posts[i].request_type}</li>
-              <li>{posts[i].content}</li>
-              <li>작성자(요청인)</li>
-              <li>{posts[i].request_type}</li>
-              <li>{getDateStringGMT9(new Date(posts[i].created_at))}</li>
-              <li>
-                <button className='btn-req' type="button" name="button" onclick="">승인</button>
-                <button className='btn-req' type="button" name="button" onclick="">거절</button>
+            <ul className="ulTable-inside2 ulTable-request"> 
+              <li><p>{posts[i].request_id}</p></li>
+              <li><p>{getType(posts[i].request_type)}</p></li>
+              <li><p>{posts[i].content}</p></li>
+              <li><p>{posts[i].name}</p></li>
+              <li><p>{getStatus(posts[i].is_approved)}</p></li>
+              <li><p>{getDateStringGMT9(new Date(posts[i].created_at))}</p></li>
+              <li className="buttons">
+                <div>
+                <button className='btn-req' type="button" name="button" onClick={onOkHandler}>승인</button>
+                <button className='btn-req' type="button" name="button" onClick={onNoHandler}>거절</button>
+                </div>
               </li>
             </ul>
           </li> 

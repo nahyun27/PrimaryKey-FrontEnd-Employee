@@ -1,13 +1,3 @@
-.ulTable-home > li              {width:9%;} /*No 열 크기*/
-.ulTable-home > li+li           {width:6.5%;} /*제목 열 크기*/
-.ulTable-home > li+li+li        {width:6.5%;} /*작성일 열 크기*/
-.ulTable-home > li+li+li+li     {width:6.5%;} /*작성자 열 크기*/
-.ulTable-home > li+li+li+li+li  {width:6.5%;} /*조회수 열 크기*/
-.ulTable-home > li+li+li+li+li+li           {width:6.5%;} /*제목 열 크기*/
-.ulTable-home > li+li+li+li+li+li+li        {width:6.5%;} /*작성일 열 크기*/
-.ulTable-home > li+li+li+li+li+li+li+li     {width:6.5%;} /*작성자 열 크기*/
-.ulTable-home > li+li+li+li+li+li+li+li+li  {width:6.5%;} /*조회수 열 크기*/
-
 .blank {
   display: inline-block;
   align-items: center;
@@ -23,4 +13,57 @@
 .blank div {
   align-self: center;
   height: 100%;
+}
+
+.ulTable-inside1 > li {
+  width:6.5%;
+  font-weight: lighter;
+  float: left;
+  font-size: 1em;
+  border-bottom : 1px solid #aaaaaa;
+  border-right : 1px solid #aaaaaa;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  height: 55px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ulTable-inside3 li {
+  width:6.5%;
+}
+
+.name {
+  width:9%;
+  border-left : 1px solid #aaaaaa;
+}
+
+.table-head li{
+  width:6.5%;
+  font-weight: lighter;
+  float: left;
+  font-size: 1em;
+  border-bottom : 1px solid black;
+  border-right : 1px solid  #aaaaaa;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  height: 45px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.vac1 {
+  background-color: rgb(245, 255, 235);
 }

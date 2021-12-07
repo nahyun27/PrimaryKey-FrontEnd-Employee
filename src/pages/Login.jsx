@@ -27,10 +27,6 @@ function Login(props) {
 
   const onSubmitHandler = () => {
     // event.preventDefault(); //리프레시 방지-> 방지해야 이 아래 라인의 코드들 실행 가능 
-
-    console.log('Email', inputId);
-    console.log('Password', inputPw);
-
     if(inputId == ""){
       alert('id를 입력해주세요.')
       document.location.href = '/'

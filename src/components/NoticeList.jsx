@@ -20,7 +20,7 @@ const NoticeList = ({posts, loading}) => {
               <li>{posts[i].notice_title}</li>
               <li>{getDateStringGMT9(new Date(posts[i].created_at))}</li>
               <li>{posts[i].notice_writer}</li>
-              <li>0</li>
+              <li>{posts[i].view_count}</li>
             </ul>
           </li> 
         </NavLink>

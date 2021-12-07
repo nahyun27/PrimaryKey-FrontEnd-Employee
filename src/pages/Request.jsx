@@ -51,7 +51,7 @@ function Request(){
               </div>
               <ul className="ulTable">
                 <li>
-                  <ul className="ulTable-inside ulTable-request">
+                  <ul className="ulTable-inside2 ulTable-request">
                     <li>요청인</li>
                     <li>요청 종류</li>
                     <li>요청 사항</li>
@@ -66,7 +66,6 @@ function Request(){
           </li>
         </ul>
         <div className="pagination">
-          {console.log("asdfg", Math.ceil(posts.length / postPerPage))}
           <Paging
             postPerPage={postPerPage}
             totalPosts={posts.length}

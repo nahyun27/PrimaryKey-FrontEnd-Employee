@@ -14,11 +14,11 @@ function Schedule(){
 
   useEffect(() => {
     const fetchPosts = async () => {
-      const res = await axios.get('http://admin.primarykey.shop:3000/check/holiday', { 
+      const res = await axios.get('http://admin.primarykey.shop:3000/schedule/', { 
         headers: { Authorization: sessionStorage.getItem("login_token")}
       })
 
-      var data_ = res.data.holidays
+      var data_ = res.data
       setPosts(data_);
     }
 
@@ -50,7 +50,7 @@ function Schedule(){
           <li className="content">
             <br/>
               <div className="tops">
-                <h2>휴가 관리</h2>
+                <h2>스케줄 관리</h2>
                 <div className="right h3">
                   <select class='selSearchOption option'>
                     <option value='A'>최신순</option>
@@ -60,17 +60,129 @@ function Schedule(){
               </div>
               <ul className="ulTable">
                 <li>
-                  <ul className="ulTable-inside ulTable-schedule">
-                    <li>요청인</li>
-                    <li>요청 종류</li>
-                    <li>요청 사항</li>
-                    <li>요청 사유</li>
-                    <li>상태</li>
-                    <li>신청일자</li>
-                    <li>관리</li>
+                  <ul className="ulTable-inside1 ulTable-schedule">
+                    <li className="name">직원</li>
+                    <li>8AM</li>
+                    <li>9AM</li>
+                    <li>10AM</li>
+                    <li>11AM</li>
+                    <li>12PM</li>
+                    <li>1PM</li>
+                    <li>2PM</li>
+                    <li>3PM</li>
+                    <li>4PM</li>
+                    <li>6PM</li>
+                    <li>7PM</li>
+                    <li>8PM</li>
+                    <li>9PM</li>
+                    <li>10PM</li>
                   </ul>
                 </li>
-                <ScheduleList posts={currentPosts}/>
+                {/* <ScheduleList posts={currentPosts}/> */}
+                <li>
+                  <ul className="ulTable-inside1 ulTable-schedule">
+                    <li className="name">김나현</li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li className="blank5">12:00 PM ~ 6:00 PM @경영본부 전략기획팀</li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                  </ul>
+                </li>
+                <li>
+                  <ul className="ulTable-inside1 ulTable-schedule">
+                    <li className="name">정종문</li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li className="blank5">2:00 PM ~ 8:00 PM @경영본부 전략기획팀</li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                  </ul>
+                </li>
+                <li>
+                  <ul className="ulTable-inside1 ulTable-schedule">
+                    <li className="name">김다예</li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li className="blank5">2:00 PM ~ 8:00 PM @경영본부 전략기획팀</li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                  </ul>
+                </li>
+                <li>
+                  <ul className="ulTable-inside1 ulTable-schedule">
+                    <li className="name">박창선</li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li className="blank5">2:00 PM ~ 8:00 PM @경영본부 전략기획팀</li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                  </ul>
+                </li>
+                <li>
+                  <ul className="ulTable-inside1 ulTable-schedule">
+                    <li className="name">하혜민</li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                  </ul>
+                </li>
+                <li>
+                  <ul className="ulTable-inside1 ulTable-schedule">
+                    <li className="name">홍길동</li>
+                    <li className="blank-all">연차</li>
+                  </ul>
+                </li>
+                <li>
+                  <ul className="ulTable-inside1 ulTable-schedule">
+                    <li className="name">이용현</li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                  </ul>
+                </li>
               </ul>
           </li>
         </ul>

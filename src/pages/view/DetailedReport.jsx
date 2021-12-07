@@ -4,24 +4,18 @@ import '../../styles/Detailed.css';
 import getDateStringGMT9 from '../../modules/DateParser';
 import {NavLink} from 'react-router-dom';
 
-const DeteiledNotice = (props) => {
+const DeteiledReport = (props) => {
+  console.log(props.location)
   const data = props.location.aboutProps.post
+  console.log(data)
   return(
-    <div className="DeteiledNotice">
+    <div className="DeteiledReport">
       <div className="container">
         <div className="tops-detailed">
-          <h2>공지사항 조회</h2>
+          <h2>건의사항 조회</h2>
           <div className="buttons">
-            <NavLink exact to="/Notice">
+            <NavLink exact to="/Report">
               <button type="button" className="btn">이전</button>
-            </NavLink>
-            <NavLink to={{
-              pathname:"/NoticeModify",
-              aboutProps:{
-                post : data
-              }
-            }}exact>
-              <button type="button" className="btn">수정</button>
             </NavLink>
           </div>
         </div>
@@ -34,7 +28,7 @@ const DeteiledNotice = (props) => {
               <div className="title-content" dangerouslySetInnerHTML={ {__html: data.title}}></div>
               <div className="info-table">
                 <li className="col">작성자</li>
-                <li className="name-info"><p>{data.notice_writer}</p></li>
+                <li className="name-info"><p>{data.employee_id}</p></li>
                 <li className="col">작성일</li>
                 <li><p>{getDateStringGMT9(new Date(data.created_at))}</p></li>
                 <li className="col">수정일</li>
@@ -44,7 +38,7 @@ const DeteiledNotice = (props) => {
             <div className="article-info">
               <h3>내용</h3>
               <hr/>
-              <div className="article-content" dangerouslySetInnerHTML={ {__html: data.content}}></div>
+              <div className="article-content" dangerouslySetInnerHTML={ {__html: data.article}}></div>
             </div>
           </div>
         </div>
@@ -53,4 +47,4 @@ const DeteiledNotice = (props) => {
   );
 }
 
-export default DeteiledNotice;
+export default DeteiledReport;

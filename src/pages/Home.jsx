@@ -17,7 +17,7 @@ function Home(){
       const res = await axios.get('http://admin.primarykey.shop:3000/attendant/', { 
         headers: { Authorization: sessionStorage.getItem("login_token")}
       })
-      console.log(res)
+      console.log("Home: ", res)
 
       var data_ = res.data
       setPosts(data_);
@@ -58,30 +58,217 @@ function Home(){
             </div>
               <ul className="ulTable">
                   <li>
-                      <ul className="ulTable-inside ulTable-home">
-                        <li>직원</li>
-                        <li>5/월</li>
-                        <li>6/화</li>
-                        <li>7/수</li>
-                        <li>8/목</li>
-                        <li>5/월</li>
-                        <li>6/화</li>
-                        <li>7/수</li>
-                        <li>8/목</li>
-                        <li>5/월</li>
-                        <li>6/화</li>
-                        <li>7/수</li>
-                        <li>8/목</li>
-                        <li>5/월</li>
-                        <li>6/화</li>
+                      <ul className="table-head">
+                        <li className="name">직원</li>
+                        <li>29/월</li>
+                        <li>30/화</li>
+                        <li>1/수</li>
+                        <li>2/목</li>
+                        <li>3/금</li>
+                        <li>4/토</li>
+                        <li>5/일</li>
+                        <li>6/월</li>
+                        <li>7/화</li>
+                        <li>8/수</li>
+                        <li>9/목</li>
+                        <li>10/금</li>
+                        <li>11/토</li>
+                        <li>12/일</li>
                       </ul>
                   </li>
-                  <HomeList posts={currentPosts}/>
+                  <li>
+                      <ul className="ulTable-inside1">
+                        <li className="name">김나현</li>
+                        <HomeList posts={currentPosts}/>
+                        <li>9:44<br/>19:29</li>
+                        <li>8:53<br/>18:59</li>
+                        <li>8:50<br/>19:11</li>
+                        <li><br/></li>
+                        <li><br/></li>
+                        <li>9:03<br/>19:00</li>
+                        <li>8:30<br/>19:21</li>
+                        <li>8:39<br/>19:15</li>
+                        <li>9:00<br/>19:01</li>
+                        <li>9:01<br/>19:11</li>
+                        <li><br/></li>
+                        <li><br/></li>
+                      </ul>
+                  </li>
+                  <li>
+                      <ul className="ulTable-inside1">
+                        <li className="name">김다예</li>
+                        <li>9:44<br/>19:29</li>
+                        <li>8:53<br/>18:59</li>
+                        <li>8:50<br/>19:11</li>
+                        <li>8:59<br/>18:49</li>
+                        <li>9:02<br/>19:00</li>
+                        <li><br/></li>
+                        <li><br/></li>
+                        <li>8:39<br/>19:15</li>
+                        <li>9:00<br/>19:01</li>
+                        <li>9:01<br/>19:11</li>
+                        <li className="vac1">연차<br/>휴가</li>
+                        <li className="vac1">연차<br/>휴가</li>
+                        <li><br/></li>
+                        <li><br/></li>
+                      </ul>
+                  </li>
+                  <li>
+                      <ul className="ulTable-inside1">
+                        <li className="name">하혜민</li>
+                        <li>9:44<br/>19:29</li>
+                        <li>8:53<br/>?</li>
+                        <li>8:50<br/>19:11</li>
+                        <li className="absent">결근</li>
+                        <li>9:02<br/>19:00</li>
+                        <li><br/></li>
+                        <li><br/></li>
+                        <li>8:39<br/>19:15</li>
+                        <li>9:00<br/>19:01</li>
+                        <li>9:01<br/>19:11</li>
+                        <li>8:30<br/>19:21</li>
+                        <li>9:10<br/>19:01</li>
+                        <li><br/></li>
+                        <li><br/></li>
+                      </ul>
+                  </li>
+                  <li>
+                      <ul className="ulTable-inside1">
+                        <li className="name">박창선</li>
+                        <li>9:44<br/>19:29</li>
+                        <li>8:30<br/>19:21</li>
+                        <li>8:50<br/>19:11</li>
+                        <li>8:53<br/>18:59</li>
+                        <li>9:02<br/>19:00</li>
+                        <li><br/></li>
+                        <li><br/></li>
+                        <li>8:39<br/>19:15</li>
+                        <li>9:00<br/>19:01</li>
+                        <li>9:01<br/>19:11</li>
+                        <li>8:30<br/>19:21</li>
+                        <li>9:10<br/>19:01</li>
+                        <li><br/></li>
+                        <li><br/></li>
+                      </ul>
+                  </li>
+                  <li>
+                      <ul className="ulTable-inside1">
+                        <li className="name">정종문</li>
+                        <li>9:44<br/>19:29</li>
+                        <li className="vac1">연차<br/>휴가</li>
+                        <li className="vac1">연차<br/>휴가</li>
+                        <li>8:59<br/>18:49</li>
+                        <li>9:02<br/>19:00</li>
+                        <li><br/></li>
+                        <li><br/></li>
+                        <li>8:39<br/>19:15</li>
+                        <li>9:00<br/>19:01</li>
+                        <li>9:01<br/>?</li>
+                        <li>8:53<br/>18:59</li>
+                        <li>8:50<br/>19:11</li>
+                        <li><br/></li>
+                        <li><br/></li>
+                      </ul>
+                  </li>
+
+                  <li>
+                      <ul className="ulTable-inside1">
+                        <li className="name">김나현</li>
+                        <HomeList posts={currentPosts}/>
+                        <li>9:44<br/>19:29</li>
+                        <li>8:53<br/>18:59</li>
+                        <li>8:50<br/>19:11</li>
+                        <li><br/></li>
+                        <li><br/></li>
+                        <li>9:03<br/>19:00</li>
+                        <li>8:30<br/>19:21</li>
+                        <li>8:39<br/>19:15</li>
+                        <li>9:00<br/>19:01</li>
+                        <li>9:01<br/>19:11</li>
+                        <li><br/></li>
+                        <li><br/></li>
+                      </ul>
+                  </li>
+                  <li>
+                      <ul className="ulTable-inside1">
+                        <li className="name">김다예</li>
+                        <li>9:44<br/>19:29</li>
+                        <li>8:53<br/>18:59</li>
+                        <li>8:50<br/>19:11</li>
+                        <li>8:59<br/>18:49</li>
+                        <li>9:02<br/>19:00</li>
+                        <li><br/></li>
+                        <li><br/></li>
+                        <li>8:39<br/>19:15</li>
+                        <li>9:00<br/>19:01</li>
+                        <li>9:01<br/>19:11</li>
+                        <li className="vac1">연차<br/>휴가</li>
+                        <li className="vac1">연차<br/>휴가</li>
+                        <li><br/></li>
+                        <li><br/></li>
+                      </ul>
+                  </li>
+                  <li>
+                      <ul className="ulTable-inside1">
+                        <li className="name">하혜민</li>
+                        <li>9:44<br/>19:29</li>
+                        <li>8:53<br/>?</li>
+                        <li>8:50<br/>19:11</li>
+                        <li className="absent">결근</li>
+                        <li>9:02<br/>19:00</li>
+                        <li><br/></li>
+                        <li><br/></li>
+                        <li>8:39<br/>19:15</li>
+                        <li>9:00<br/>19:01</li>
+                        <li>9:01<br/>19:11</li>
+                        <li>8:30<br/>19:21</li>
+                        <li>9:10<br/>19:01</li>
+                        <li><br/></li>
+                        <li><br/></li>
+                      </ul>
+                  </li>
+                  <li>
+                      <ul className="ulTable-inside1">
+                        <li className="name">박창선</li>
+                        <li>9:44<br/>19:29</li>
+                        <li>8:30<br/>19:21</li>
+                        <li>8:50<br/>19:11</li>
+                        <li>8:53<br/>18:59</li>
+                        <li>9:02<br/>19:00</li>
+                        <li><br/></li>
+                        <li><br/></li>
+                        <li>8:39<br/>19:15</li>
+                        <li>9:00<br/>19:01</li>
+                        <li>9:01<br/>19:11</li>
+                        <li>8:30<br/>19:21</li>
+                        <li>9:10<br/>19:01</li>
+                        <li><br/></li>
+                        <li><br/></li>
+                      </ul>
+                  </li>
+                  <li>
+                      <ul className="ulTable-inside1">
+                        <li className="name">정종문</li>
+                        <li>9:44<br/>19:29</li>
+                        <li className="vac1">연차<br/>휴가</li>
+                        <li className="vac1">연차<br/>휴가</li>
+                        <li>8:59<br/>18:49</li>
+                        <li>9:02<br/>19:00</li>
+                        <li><br/></li>
+                        <li><br/></li>
+                        <li>8:39<br/>19:15</li>
+                        <li>9:00<br/>19:01</li>
+                        <li>9:01<br/>?</li>
+                        <li>8:53<br/>18:59</li>
+                        <li>8:50<br/>19:11</li>
+                        <li><br/></li>
+                        <li><br/></li>
+                      </ul>
+                  </li>
               </ul>
           </li>
         </ul>
         <div className="pagination">
-          {console.log("asdfg", Math.ceil(posts.length / postPerPage))}
           <Paging
             postPerPage={postPerPage}
             totalPosts={posts.length}

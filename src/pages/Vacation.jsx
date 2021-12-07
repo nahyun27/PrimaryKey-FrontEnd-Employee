@@ -14,11 +14,11 @@ function Vacation(){
 
   useEffect(() => {
     const fetchPosts = async () => {
-      const res = await axios.get('http://admin.primarykey.shop:3000/check/holiday', { 
+      const res = await axios.get('http://admin.primarykey.shop:3000/check/now', { 
         headers: { Authorization: sessionStorage.getItem("login_token")}
       })
 
-      var data_ = res.data.holidays
+      var data_ = res.data.statuslist
       setPosts(data_);
     }
 
@@ -61,13 +61,13 @@ function Vacation(){
               <ul className="ulTable">
                 <li>
                   <ul className="ulTable-inside ulTable-vacation">
-                    <li>요청인</li>
-                    <li>요청 종류</li>
-                    <li>요청 사항</li>
-                    <li>요청 사유</li>
+                    <li>휴가 번호</li>
+                    <li>직원명</li>
+                    <li>휴가 시작일시</li>
+                    <li>휴가 종료일시</li>
+                    <li>휴가 신청일</li>
                     <li>상태</li>
-                    <li>신청일자</li>
-                    <li>관리</li>
+                    <li>유형</li>
                   </ul>
                 </li>
                 <VacationList posts={currentPosts}/>
@@ -75,7 +75,6 @@ function Vacation(){
           </li>
         </ul>
         <div className="pagination">
-          {console.log("asdfg", Math.ceil(posts.length / postPerPage))}
           <Paging
             postPerPage={postPerPage}
             totalPosts={posts.length}

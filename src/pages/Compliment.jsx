@@ -112,7 +112,6 @@ function Compliment(){
           </li>
         </ul>
         <div className="pagination">
-          {console.log("asdfg", Math.ceil(posts.length / postPerPage))}
           <Paging
             postPerPage={postPerPage}
             totalPosts={posts.length}

@@ -1,12 +1,16 @@
 import './App.css';
 import Home from './pages/Home.jsx';
 import Request from './pages/Request.jsx';
+import Report from './pages/Report.jsx';
 import Vacation from './pages/Vacation.jsx';
 import Schedule from './pages/Schedule.jsx';
 import Notice from './pages/Notice.jsx';
 import NoticeWriting from './pages/NoticeWriting.jsx';
 import Meal from './pages/Meal.jsx';
 import Compliment from './pages/Compliment.jsx';
+
+import DetailedReport from './pages/view/DetailedReport.jsx';
+import DetailedNotice from './pages/view/DetailedNotice.jsx';
 
 import Login from './pages/Login.jsx'
 import Footer from './components/Footer.jsx';
@@ -39,6 +43,7 @@ function App() {
           {isLogin ?
           <Switch>
             <Route path='/Home' exact component={Home} />
+            <Route path='/Report' exact component={Report} />
             <Route path='/Request' exact component={Request} />
             <Route path='/Vacation' exact component={Vacation} />
             <Route path='/Schedule' exact component={Schedule} />
@@ -46,6 +51,9 @@ function App() {
             <Route path='/Meal' exact component={Meal} />
             <Route path='/NoticeWriting' exact component={NoticeWriting} />
             <Route path='/Notice' exact component={Notice} />
+
+            <Route path='/DetailedReport' exact component={DetailedReport} />
+            <Route path='/DetailedNotice' exact component={DetailedNotice} />
 
             <Route path='/' exact component={Login} />
           </Switch>

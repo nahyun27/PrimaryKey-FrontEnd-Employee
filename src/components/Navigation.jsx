@@ -32,9 +32,10 @@ function Navigation(props) {
           <li><NavLink exact to="/Schedule">직원 스케줄 관리</NavLink></li>
           <li><NavLink exact to="/Meal">배식 신청</NavLink></li>
           <li><NavLink exact to="/Compliment">우수 직원</NavLink></li>
+          <li><NavLink exact to="/Report">건의사항 관리</NavLink></li>
           <li><NavLink exact to="/Notice">공지사항</NavLink></li>
         </ul>
-        <div className="navbar__menu">
+        <div className="navbar__logout">
           <button type='button' className="logout_btn" onClick={onLogout}> {props.isLogin ? "로그아웃" : "로그인"} </button>
           <p className="separator">|</p>
           {sessionStorage.getItem('login_name')}
@@ -53,6 +54,7 @@ function Navigation(props) {
             <li><NavLink to="/Schedule">직원 스케줄 관리</NavLink></li>
             <li><NavLink exact to="/Meal">배식 신청</NavLink></li>
             <li><NavLink exact to="/Compliment">우수 직원</NavLink></li>
+            <li><NavLink exact to="/Report">건의사항 관리</NavLink></li>
             <li><NavLink exact to="/Notice">공지사항</NavLink></li>
           </ul>
         </div>

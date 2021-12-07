@@ -2,7 +2,7 @@ import React from 'react';
 import getDateStringGMT9 from '../modules/DateParser';
 import {NavLink} from 'react-router-dom';
 
-const VacationList = ({posts, loading}) => {
+const VacationList = ({posts}) => {
   return (
     Object.keys(posts).map((i) => {
       console.log("asdf", posts[i])
@@ -18,7 +18,7 @@ const VacationList = ({posts, loading}) => {
             <ul className="ulTable-inside ulTable-request"> 
               <li>{posts[i].holiday_id}</li>
               <li>{posts[i].description}</li>
-              <li>작성자(요청인)</li>
+              <li>{posts[i].employee.name}</li>
               <li>{posts[i].request_type}</li>
               <li>{getDateStringGMT9(new Date(posts[i].start_date))}</li>
               <li>{getDateStringGMT9(new Date(posts[i].end_date))}</li>

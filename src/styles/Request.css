@@ -15,3 +15,23 @@
   background-color: #f5f6f9;
   cursor: pointer;
 }
+
+.buttons {
+  padding-top: 0;
+}
+
+.ulTable-inside2 li{
+  font-weight: lighter;
+  float: left;
+  font-size: 1em;
+  border-bottom: 1px solid #808080;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

@@ -75,13 +75,41 @@ a {
 
 .navbar__menu {
   display: flex;
+  flex-direction: row;
+  justify-content: center;
   list-style: none;
   padding-left: 0;
+  width: 77%;
 }
 
 .navbar__menu li {
   padding-left: 30px;
   font-size: 1.2em;
+  max-width: 21%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.navbar__logout {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  list-style: none;
+  padding-left: 0;
+  width: 12%;
+}
+
+.separator {
+  margin: 0 5px;
+}
+.navbar__logout li {
+  font-size: 1em;
+  max-width: 10%;
+  min-width: 6%;
+}
+
+.navbar__logout li :hover {
+  font-weight: 800;
 }
 
 .navbar__menu li :hover {

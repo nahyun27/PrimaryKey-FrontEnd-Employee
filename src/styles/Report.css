@@ -1,0 +1,6 @@
+
+.ulTable-report > li              {width:10%;} /*No 열 크기*/
+.ulTable-report > li+li           {width:10%;} /*제목 열 크기*/
+.ulTable-report > li+li+li        {width:40%;} /*작성일 열 크기*/
+.ulTable-report > li+li+li+li     {width:30%;} /*작성자 열 크기*/
+.ulTable-report > li+li+li+li+li  {width:10%;} /*조회수 열 크기*/
