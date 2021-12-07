@@ -9,7 +9,7 @@ p {
 
 body {
   margin: 0;
-  padding-top: 70px;
+  padding-top: 60px;
 }
 
 a {
@@ -17,3 +17,8 @@ a {
   color: #121212;
 }
 
+.mainWrapper {
+  width: 70%;
+  height: 900px;
+  margin: 0 auto; /*가운데 정렬*/
+}

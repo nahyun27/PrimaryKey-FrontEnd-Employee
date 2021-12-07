@@ -4,6 +4,7 @@ import Request from './pages/Request.jsx';
 import Vacation from './pages/Vacation.jsx';
 import Schedule from './pages/Schedule.jsx';
 import Notice from './pages/Notice.jsx';
+import NoticeWriting from './pages/NoticeWriting.jsx';
 import Meal from './pages/Meal.jsx';
 import Compliment from './pages/Compliment.jsx';
 
@@ -25,6 +26,7 @@ function App() {
             <Route path='/Schedule' exact component={Schedule} />
             <Route path='/Compliment' exact component={Compliment} />
             <Route path='/Meal' exact component={Meal} />
+            <Route path='/NoticeWriting' exact component={NoticeWriting} />
             <Route path='/Notice' exact component={Notice} />
 
             <Route path='/' exact component={Login} />

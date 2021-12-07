@@ -1,12 +1,12 @@
-.ulTable-home > li > ul > li              {width:9%;} /*No 열 크기*/
-.ulTable-home > li > ul > li+li           {width:6.5%;} /*제목 열 크기*/
-.ulTable-home > li > ul > li+li+li        {width:6.5%;} /*작성일 열 크기*/
-.ulTable-home > li > ul > li+li+li+li     {width:6.5%;} /*작성자 열 크기*/
-.ulTable-home > li > ul > li+li+li+li+li  {width:6.5%;} /*조회수 열 크기*/
-.ulTable-home > li > ul > li+li+li+li+li+li           {width:6.5%;} /*제목 열 크기*/
-.ulTable-home > li > ul > li+li+li+li+li+li+li        {width:6.5%;} /*작성일 열 크기*/
-.ulTable-home > li > ul > li+li+li+li+li+li+li+li     {width:6.5%;} /*작성자 열 크기*/
-.ulTable-home > li > ul > li+li+li+li+li+li+li+li+li  {width:6.5%;} /*조회수 열 크기*/
+.ulTable-home > li              {width:9%;} /*No 열 크기*/
+.ulTable-home > li+li           {width:6.5%;} /*제목 열 크기*/
+.ulTable-home > li+li+li        {width:6.5%;} /*작성일 열 크기*/
+.ulTable-home > li+li+li+li     {width:6.5%;} /*작성자 열 크기*/
+.ulTable-home > li+li+li+li+li  {width:6.5%;} /*조회수 열 크기*/
+.ulTable-home > li+li+li+li+li+li           {width:6.5%;} /*제목 열 크기*/
+.ulTable-home > li+li+li+li+li+li+li        {width:6.5%;} /*작성일 열 크기*/
+.ulTable-home > li+li+li+li+li+li+li+li     {width:6.5%;} /*작성자 열 크기*/
+.ulTable-home > li+li+li+li+li+li+li+li+li  {width:6.5%;} /*조회수 열 크기*/
 
 .blank {
   display: inline-block;

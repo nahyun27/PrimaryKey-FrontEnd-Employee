@@ -5,15 +5,21 @@ import {NavLink} from 'react-router-dom';
 const NoticeList = ({posts, loading}) => {
   return (
     Object.keys(posts).map((i) => {
-      console.log("asdf", posts[i].court_name)
+      console.log("asdf", posts[i])
       return (
-        <NavLink exact to="/DetailedNotice">
-          <li key={posts[i].id}>
-            <ul className="ulTable-inside ulTable-game"> 
-              <li>{posts[i].id}</li>
-              <li>{posts[i].title}</li>
-              <li>{getDateStringGMT9(new Date(posts[i].createdAt))}</li>
-              <li>{posts[i].admin.name}</li>
+        <NavLink to={{
+          pathname:"/DetailedNotice",
+          aboutProps:{
+            post : posts[i]
+          }
+        }}
+        exact>
+          <li key={posts[i].employee_notice_id}>
+            <ul className="ulTable-inside ulTable-notice"> 
+              <li>{posts[i].employee_notice_id}</li>
+              <li>{posts[i].notice_title}</li>
+              <li>{getDateStringGMT9(new Date(posts[i].created_at))}</li>
+              <li>{posts[i].notice_writer}</li>
               <li>0</li>
             </ul>
           </li> 
@@ -24,3 +30,4 @@ const NoticeList = ({posts, loading}) => {
 }
 
 export default NoticeList;
+

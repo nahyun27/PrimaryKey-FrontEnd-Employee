@@ -2,27 +2,30 @@ import '../styles/common.css';
 import '../styles/writing.css';
 import {NavLink} from 'react-router-dom';
 import React, { useState} from 'react';
-import axios from 'axios';
 import { CKEditor } from '@ckeditor/ckeditor5-react';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 
-function NoticeModify (props) {
+function NoticeWriting (props) {
   const [inputTitle, setInputTitle] = useState('')
   const [inputText, setInputText] = useState('')
 
-  // input data 의 변화가 있을 때마다 value 값을 변경해서 useState 해준다
   const handleInputTitle = (e) => {
     setInputTitle(e.currentTarget.value)
   }
 
   const onSubmitHandler = () => {
-    fetch('https://goote.dev/v1/cs/notice/create', {
+    console.log(props.location.aboutProps.post.id);
+    console.log('title', inputTitle);
+    console.log('article', inputText);
+
+    fetch('https://goote.dev/v1/cs/notice/update', {
       method: 'POST',
       headers : new Headers({
         'Content-Type': 'application/json',
         'Authorization' : sessionStorage.getItem("login_token")
       }),
       body : JSON.stringify({
+        notice_id: props.location.aboutProps.post.id,
         title: inputTitle,
         article: inputText
       })
@@ -31,34 +34,34 @@ function NoticeModify (props) {
     .then((res) => {
       console.log(res)
       if(res.status === 200) {
-        props.history.push('/Notice')  
+        props.history.push('/Notice')             //리액트에서 페이지 이동하기 위해서는 props.history.push() 이용.
       } else{
         alert('공지사항 등록에 실패하였습니다.')
       }
     })
   }
-  
+  {console.log(props.location.aboutProps.post.article)}
   return(
-    <div className="NoticeModify">
+    <div className="NoticeWriting">
       <div className="container">
-        <h2>공지사항 작성</h2>
+        <h2>공지사항 수정</h2>
 
         <form className="writing-box" id="form_test" action="insertTest.do" method="post" encType="multipart/form-data">
           <div className="elem">
             <h3>제목</h3>
-            <input type="text" placeholder="제목을 입력하세요." name="Title" className="form-control" value={inputTitle} onChange={handleInputTitle} required />
+            <input type="text" placeholder="제목을 입력하세요." name="Title" className="form-control" defaultValue={props.location.aboutProps.post.title} onChange={handleInputTitle} required />
           </div>
 
           <div className="elem">
             <h3>작성자</h3>
             <input type="text" placeholder="작성자를 입력하세요." name="Name" className="form-control" />
           </div>
-
+          
           <div className="elem">
             <h3>내용</h3>
             <CKEditor
               editor={ ClassicEditor }
-              data={"<p></p>"}
+              data={props.location.aboutProps.post.article}
               onReady={ editor => {
                   // You can store the "editor" and use when it is needed.
                   console.log( 'Editor is ready to use!', editor );
@@ -74,8 +77,6 @@ function NoticeModify (props) {
               onFocus={ ( event, editor ) => {
                   console.log( 'Focus.', editor );
               } }
-              config={{placeholder:'내용을 입력해주세요.' }}
-              
             />
           </div>
 
@@ -86,8 +87,13 @@ function NoticeModify (props) {
             </div>
 
             <div className="buttons">
-              <NavLink exact to="/Notice">
-                <button id="btn_previous" type="button" className="sear-btn">이전</button>
+              <NavLink to={{
+                pathname:"/DetailedNotice",
+                aboutProps:{
+                  post : props.location.aboutProps.post
+                }
+              }} exact>
+                <button id="btn_previous" type="button" className="sear-btn">취소</button>
               </NavLink>
               <button id="btn_register" type="button" className="sear-btn" onClick={onSubmitHandler}>등록</button>
             </div>
@@ -98,4 +104,4 @@ function NoticeModify (props) {
   );
 }
 
-export default NoticeModify;
+export default NoticeWriting;

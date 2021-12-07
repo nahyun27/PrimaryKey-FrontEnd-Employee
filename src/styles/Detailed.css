@@ -1,0 +1,148 @@
+.profile-box {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  padding: 30px;
+}
+.main-info h3{
+  font-size: 1.4em;
+}
+
+.user-half {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.half > p{
+  margin-top: 30px;
+  font-size: 1.6em;
+  font-weight: 600;
+}
+
+.half-text {
+  margin: 30px;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.information p {
+  font-size: 1.1em;
+  margin: 3px 0;
+}
+
+.tops-detailed {
+  width: 70%;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.img-box {
+  width: 160px;
+  height: 160px; 
+  border-radius: 70%;
+  overflow: hidden;
+  border: solid;
+  border-color: #aaaaaa;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.title-content {
+  width: 100%;
+  padding-bottom: 10px;
+  font-size: 1.1em;
+}
+
+.info-table {
+  width: 100%;
+  border-top: 1px solid #aaaaaa;
+  border-bottom: 1px solid #aaaaaa;
+  font-size: 1em;
+  display: flex;
+  flex-direction: row;
+  /* border-top: none;
+  border-right: none; */
+}
+
+.info-table > li {
+  padding: 4px 10px;
+  border-right: 1px solid #aaaaaa;
+  width: 25%;
+  text-align: left;
+}
+
+hr {
+  margin: 10px 0;
+}
+
+.end {
+  border-right: none;
+}
+
+.info-table > .name-info {
+  width: 20%;
+  text-align: left;
+}
+
+.info-table > .col {
+  width: 10%;
+  text-align: center;
+  background-color: #f5f6f9;
+}
+
+.main-info {
+  display: flex;
+  flex-direction: column;
+  height: 700px;
+}
+
+.information {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.information {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: left;
+  margin-bottom: 30px;
+  height: 600px;
+}
+
+.title-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.article-info {
+  margin-top: 15px;
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+
+.article-content{
+  font-size: 1em;
+}
+

@@ -1,0 +1,42 @@
+.ulTable-comliment > li              {width:20%;} /*No 열 크기*/
+.ulTable-comliment > li+li           {width:10%;} /*제목 열 크기*/
+.ulTable-comliment > li+li+li        {width:40%;} /*작성일 열 크기*/
+.ulTable-comliment > li+li+li+li     {width:10%;} /*작성일 열 크기*/
+.ulTable-comliment > li+li+li+li+li  {width:20%;} /*작성일 열 크기*/
+.rank-img {
+  padding-left: 5px;
+  height: 40px;
+}
+
+.ranks {
+  width: 100%;
+  height: 35%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #f5f6f9;
+}
+
+.rank-half {
+  width: 50%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.rank {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 10px;
+}
+
+.rank p {
+  width: 30%;
+  font-size: 1.2em;
+  font-weight: 600;
+}

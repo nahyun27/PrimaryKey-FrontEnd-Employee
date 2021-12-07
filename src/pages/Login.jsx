@@ -51,6 +51,7 @@ function Login(props) {
         sessionStorage.setItem('login_token', axios.defaults.headers.common['Authorization'])
         sessionStorage.setItem('login_name', response.data.name)
         document.location.href = '/Home'
+        alert(sessionStorage.getItem("login_name")+ "님 환영합니다!");
       } else {
         console.log("실패")
         alert('로그인에 실패하였습니다.')
