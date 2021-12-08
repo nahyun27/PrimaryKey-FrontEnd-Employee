@@ -14,7 +14,7 @@ function NoticeModify (props) {
   }
 
   const onSubmitHandler = () => {
-    fetch('http://admin.primarykey.shop:3000/service/notice', {
+    fetch('http://admin.primarykey.shop:3000/service/notice/'+ props.location.aboutProps.post.employee_notice_id, {
       method: 'POST',
       headers : new Headers({
         'Content-Type': 'application/json',
@@ -30,7 +30,10 @@ function NoticeModify (props) {
     .then((res) => {
       console.log("성공!", res)
       props.history.push('/Notice')  
-      alert('공지사항이 등록되었습니다.')
+      alert('공지사항이 수정되었습니다.')
+    })
+    .catch((error) => {
+      console.log(errorㅁa)
     })
   }
   
@@ -88,7 +91,7 @@ function NoticeModify (props) {
               }} exact>
                 <button id="btn_previous" type="button" className="sear-btn">취소</button>
               </NavLink>
-              <button id="btn_register" type="button" className="sear-btn" onClick={onSubmitHandler}>등록</button>
+              <button id="btn_register" type="button" className="sear-btn" onClick={onSubmitHandler}>수정</button>
             </div>
           </div>
         </form>

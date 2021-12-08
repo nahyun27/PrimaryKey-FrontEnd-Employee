@@ -6,6 +6,7 @@ import Vacation from './pages/Vacation.jsx';
 import Schedule from './pages/Schedule.jsx';
 import Notice from './pages/Notice.jsx';
 import NoticeWriting from './pages/NoticeWriting.jsx';
+import ScheduleWriting from './pages/ScheduleWriting.jsx';
 import NoticeModify from './pages/NoticeModify.jsx';
 import Meal from './pages/Meal.jsx';
 import Compliment from './pages/Compliment.jsx';
@@ -50,6 +51,8 @@ function App() {
             <Route path='/Schedule' exact component={Schedule} />
             <Route path='/Compliment' exact component={Compliment} />
             <Route path='/Meal' exact component={Meal} />
+
+            <Route path='/ScheduleWriting' exact component={ScheduleWriting} />
             <Route path='/NoticeWriting' exact component={NoticeWriting} />
             <Route path='/NoticeModify' exact component={NoticeModify} />
             <Route path='/Notice' exact component={Notice} />

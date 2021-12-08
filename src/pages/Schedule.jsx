@@ -7,12 +7,17 @@ import Paging from '../modules/Paging.jsx';
 import ScheduleList from '../components/ScheduleList.jsx';
 import axios from 'axios';
 
-function Schedule(){
+function Schedule(props){
+  const [add, setAdd] = useState(false);
   const [posts, setPosts] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [postPerPage] = useState(15);
 
   useEffect(() => {
+    if (props.location.aboutProps){
+      if(props.location.aboutProps.post)
+        setAdd(true)
+    }
     const fetchPosts = async () => {
       const res = await axios.get('http://admin.primarykey.shop:3000/schedule/', { 
         headers: { Authorization: sessionStorage.getItem("login_token")}
@@ -51,11 +56,10 @@ function Schedule(){
             <br/>
               <div className="tops">
                 <h2>스케줄 관리</h2>
-                <div className="right h3">
-                  <select class='selSearchOption option'>
-                    <option value='A'>최신순</option>
-                    <option value='T'>게시순</option>
-                  </select>
+                <div>
+                  <NavLink exact to="/ScheduleWriting">
+                    <button type="button" className='btn' name="button">스케줄 등록</button>
+                  </NavLink>
                 </div>
               </div>
               <ul className="ulTable">
@@ -71,14 +75,52 @@ function Schedule(){
                     <li>2PM</li>
                     <li>3PM</li>
                     <li>4PM</li>
+                    <li>5PM</li>
                     <li>6PM</li>
                     <li>7PM</li>
                     <li>8PM</li>
                     <li>9PM</li>
-                    <li>10PM</li>
                   </ul>
                 </li>
                 {/* <ScheduleList posts={currentPosts}/> */}
+                <li>
+
+                {!(add)? 
+                  <ul className="ulTable-inside1 ulTable-schedule">
+                    <li className="name">김나모</li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                  </ul>
+                  : 
+                  <ul className="ulTable-inside1 ulTable-schedule">
+                    <li className="name">김나모</li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li className="blank3">12:00PM~5:00PM 인수인계</li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                  </ul>
+                    }
+                </li>
                 <li>
                   <ul className="ulTable-inside1 ulTable-schedule">
                     <li className="name">김나현</li>
@@ -86,7 +128,7 @@ function Schedule(){
                     <li></li>
                     <li></li>
                     <li></li>
-                    <li className="blank5">12:00 PM ~ 6:00 PM @경영본부 전략기획팀</li>
+                    <li className="blank5">12:00PM~5:00PM @경영본부 전략기획팀</li>
                     <li></li>
                     <li></li>
                     <li></li>
@@ -103,7 +145,7 @@ function Schedule(){
                     <li></li>
                     <li></li>
                     <li></li>
-                    <li className="blank5">2:00 PM ~ 8:00 PM @경영본부 전략기획팀</li>
+                    <li className="blank5">2:00PM~7:00PM @경영본부 전략기획팀</li>
                     <li></li>
                     <li></li>
                     <li></li>
@@ -137,7 +179,7 @@ function Schedule(){
                     <li></li>
                     <li></li>
                     <li></li>
-                    <li className="blank5">2:00 PM ~ 8:00 PM @경영본부 전략기획팀</li>
+                    <li className="blank5">2:00PM~7:00PM @경영본부 전략기획팀</li>
                     <li></li>
                     <li></li>
                     <li></li>
@@ -212,7 +254,7 @@ function Schedule(){
                     <li></li>
                     <li></li>
                     <li></li>
-                    <li className="blank4">1:00 PM ~ 5:00 PM 정기교육</li>
+                    <li className="blank4">1:00PM~5:00PM 정기교육</li>
                     <li></li>
                     <li></li>
                     <li></li>

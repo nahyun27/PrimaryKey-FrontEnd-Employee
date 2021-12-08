@@ -1,6 +1,8 @@
 import React from 'react';
 import getDateStringGMT9 from '../modules/DateParser';
 import {NavLink} from 'react-router-dom';
+import getTypeParser from '../modules/VacTypeParser';
+
 
 const VacationList = ({posts}) => {
   return (
@@ -18,7 +20,7 @@ const VacationList = ({posts}) => {
             <ul className="ulTable-inside ulTable-vacation"> 
               <li>{posts[i].leave_id}</li>
               <li>{posts[i].employee.name}</li>
-              <li>{posts[i].leave_type}</li>
+              <li>{getTypeParser(posts[i].leave_type)}</li>
               <li>{getDateStringGMT9(new Date(posts[i].start_date))}</li>
               <li>{getDateStringGMT9(new Date(posts[i].end_date))}</li>
               <li>승인됨</li>

@@ -7,7 +7,15 @@
   padding: 5px 10px;
   font-size: 1em;
 }
-
+.form-control2 {
+  margin-top: 10px;
+  width: 100%;
+  height: 200px;
+  border-radius: 3px;
+  border: 1px solid #aaaaaa;
+  padding: 5px 10px;
+  font-size: 1em;
+}
 
 h3 {
   text-align: left;
@@ -21,7 +29,7 @@ h3 {
 
 .container {
   width: 100%;
-  height: 100vh;
+  height: 97vh;
   background: #f5f6f9;
   display: flex;
   flex-direction: column;
@@ -32,6 +40,7 @@ h3 {
 
 .writing-box {
   width: 70%;
+  height: 84vh;
   align-items: center;
   background: #FFFFFF;
   border: 1px solid #D6D6D6;
@@ -74,5 +83,51 @@ h3 {
   min-width: 400px;
 }
 .ck-editor__editable {
-  min-height: 400px;
+  min-height: 350px;
+}
+
+.date-search {
+  margin-top: 10px;
+  width: 100%;
+  height: 35px;
+  padding: 5px 10px;
+  font-size: 1em;
+}
+
+.pp {
+  margin-top: 20px;
+}
+
+.elem .top44 {
+  margin-right: 300px;
+  margin-bottom: 40px;
+}
+
+
+.green {
+  background-color: rgb(222, 240, 204);
+  font-size: 1.1em;
+  font-weight: 500;
+  color: rgb(21, 48, 21);
+}
+
+.blue {
+  background-color: rgb(204, 236, 240);
+  font-size: 1.1em;
+  font-weight: 500;
+  color: rgb(21, 29, 48);
+}
+
+.red {
+  background-color: rgb(240, 204, 204);
+  font-size: 1.1em;
+  font-weight: 500;
+  color: rgb(170, 64, 64);
+}
+
+.purple {
+  background-color: rgb(226, 204, 240);
+  font-size: 1.1em;
+  font-weight: 500;
+  color: rgb(65, 29, 77);
 }

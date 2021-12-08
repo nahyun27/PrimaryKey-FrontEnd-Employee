@@ -26,11 +26,10 @@ const RequestList = ({posts, loading}) => {
         exact>
           <li key={posts[i].request_id}>
             <ul className="ulTable-inside2 ulTable-request"> 
-              <li><p>{posts[i].request_id}</p></li>
+              <li><p>{posts[i].request_id + 1}</p></li>
               <li><p>{posts[i].employee.name}</p></li>
               <li><p>{getType(posts[i].request_type)}</p></li>
               <li><p>{posts[i].content}</p></li>
-              <li><p>연차</p></li>
               <li><p>{getDateStringGMT9(new Date(posts[i].created_at))}</p></li>
               {!(posts[i].is_approved)? <li className="buttons">
                 <div>
@@ -38,7 +37,6 @@ const RequestList = ({posts, loading}) => {
                 <button className='btn-req' type="button" name="button" onClick={onNoHandler}>거절</button>
                 </div>
               </li>: <li><p>승인됨</p></li>}
-
             </ul>
           </li> 
         </NavLink>

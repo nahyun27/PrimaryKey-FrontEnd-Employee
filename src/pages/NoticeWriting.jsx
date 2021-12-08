@@ -6,7 +6,7 @@ import axios from 'axios';
 import { CKEditor } from '@ckeditor/ckeditor5-react';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 
-function NoticeModify (props) {
+function NoticeWriting (props) {
   const [inputTitle, setInputTitle] = useState('')
   const [inputText, setInputText] = useState('')
 
@@ -37,7 +37,7 @@ function NoticeModify (props) {
   }
   
   return(
-    <div className="NoticeModify">
+    <div className="NoticeWriting">
       <div className="container">
         <h2>공지사항 작성</h2>
 
@@ -96,4 +96,4 @@ function NoticeModify (props) {
   );
 }
 
-export default NoticeModify;
+export default NoticeWriting;

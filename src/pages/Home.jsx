@@ -8,9 +8,14 @@ import axios from 'axios';
 
 
 function Home(){
+  const [search, setSearch] = useState(false);
   const [posts, setPosts] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [postPerPage] = useState(12);
+
+  const onSearchHandler = () => {
+    setSearch(true)
+  }
 
   useEffect(() => {
     const fetchPosts = async () => {
@@ -42,12 +47,10 @@ function Home(){
           <li className='liSearchOption'>
               <div>
                   <select className='selSearchOption option'>
-                      <option value='A'>제목+내용</option>
-                      <option value='T'>제목</option>
-                      <option value='C'>내용</option>
+                      <option value='A'>직원명</option>
                   </select>
                   <input className='search_bar' placeholder="검색어를 입력하세요."/>
-                  <input className='sear-btn'type='button' value='검색'/>
+                  <input className='sear-btn'type='button' onClick={onSearchHandler} value='검색'/>
               </div>
           </li>
 
@@ -56,6 +59,7 @@ function Home(){
             <div className="tops">
               <h2>출퇴근 관리</h2>
             </div>
+            {!(search)? 
               <ul className="ulTable">
                   <li>
                       <ul className="table-head">
@@ -266,6 +270,68 @@ function Home(){
                       </ul>
                   </li>
               </ul>
+              :
+              <ul className="ulTable">
+                  <li>
+                      <ul className="table-head">
+                        <li className="name">직원</li>
+                        <li>29/월</li>
+                        <li>30/화</li>
+                        <li>1/수</li>
+                        <li>2/목</li>
+                        <li>3/금</li>
+                        <li className="sat">4/토</li>
+                        <li className="sun">5/일</li>
+                        <li>6/월</li>
+                        <li>7/화</li>
+                        <li>8/수</li>
+                        <li>9/목</li>
+                        <li>10/금</li>
+                        <li className="sat">11/토</li>
+                        <li className="sun">12/일</li>
+                      </ul>
+                  </li>
+                  
+                  <li>
+                      <ul className="ulTable-inside1">
+                        <li className="name">정종문</li>
+                        <li>9:44<br/>19:29</li>
+                        <li className="vac1">연차<br/>휴가</li>
+                        <li className="vac1">연차<br/>휴가</li>
+                        <li>8:59<br/>18:49</li>
+                        <li>9:02<br/>19:00</li>
+                        <li><br/></li>
+                        <li><br/></li>
+                        <li>8:39<br/>19:15</li>
+                        <li>9:00<br/>19:01</li>
+                        <li>9:01<br/>?</li>
+                        <li>8:53<br/>18:59</li>
+                        <li>8:50<br/>19:11</li>
+                        <li><br/></li>
+                        <li><br/></li>
+                      </ul>
+                  </li>
+                  <li>
+                      <ul className="ulTable-inside1">
+                        <li className="name">정종문</li>
+                        <li>9:44<br/>19:29</li>
+                        <li>8:53<br/>18:59</li>
+                        <li>8:50<br/>19:11</li>
+                        <li>8:59<br/>18:49</li>
+                        <li>9:02<br/>19:00</li>
+                        <li><br/></li>
+                        <li><br/></li>
+                        <li>8:39<br/>19:15</li>
+                        <li>9:00<br/>19:01</li>
+                        <li>9:01<br/>?</li>
+                        <li>8:53<br/>18:59</li>
+                        <li>8:50<br/>19:11</li>
+                        <li><br/></li>
+                        <li><br/></li>
+                      </ul>
+                  </li>
+              </ul>
+            }
           </li>
         </ul>
         <div className="pagination">

@@ -65,53 +65,40 @@ function Request(){
                     <li>요청인</li>
                     <li>요청 종류</li>
                     <li>요청 사항</li>
-                    <li>요청 사유</li>
-                    {/* <li>상태</li> */}
                     <li>신청일자</li>
                     <li>상태 및 관리</li>
                   </ul>
                 </li>
-                <RequestList posts={currentPosts}/>
                 <li>
                   <ul className="ulTable-inside2 ulTable-request"> 
-                    <li><p>2</p></li>
+                    <li><p>1</p></li>
                     <li><p>김나현</p></li>
                     <li><p>휴가 요청</p></li>
                     <li><p>2021.12.11~2021.12.13</p></li>
-                    <li><p>연차</p></li>
                     {/* <li><p>대기중</p></li> */}
-                    <li><p>2021.12.07</p></li>
-                    {!(ok)? <li className="buttons">
+                    <li><p>2021.12.01 01:03:47</p></li>
+                    {!(ok)? 
+                    <li className="buttons">
                       <div>
-                      <button className='btn-req' type="button" name="button" onClick={onOkHandler}>승인</button>
-                      <button className='btn-req' type="button" name="button" onClick={onNoHandler}>거절</button>
+                        <button className='btn-req' type="button" name="button" onClick={onOkHandler}>승인</button>
+                        <button className='btn-req' type="button" name="button" onClick={onNoHandler}>거절</button>
                       </div>
-                    </li>: <li><p>승인됨</p></li>}
-                  </ul>
-                </li> 
-                <li>
-                  <ul className="ulTable-inside2 ulTable-request"> 
-                    <li><p>2</p></li>
-                    <li><p>김다예</p></li>
-                    <li><p>휴가 요청</p></li>
-                    <li><p>2021.12.11~2021.12.13</p></li>
-                    <li><p>연차</p></li>
-                    {/* <li><p>대기중</p></li> */}
-                    <li><p>2021.12.07</p></li>
+                    </li>
+                    :
                     <li className="buttons">
                       승인됨
                     </li>
+                  }
                   </ul>
                 </li> 
+                <RequestList posts={currentPosts}/>
                 <li>
                   <ul className="ulTable-inside2 ulTable-request"> 
-                    <li><p>3</p></li>
+                    <li><p>8</p></li>
                     <li><p>김다예</p></li>
                     <li><p>병가 요청</p></li>
-                    <li><p>2021.12.11~2021.12.13</p></li>
-                    <li><p>발열</p></li>
-                    {/* <li><p>대기중</p></li> */}
-                    <li><p>2021.12.07</p></li>
+                    <li><p>코로나 증상이 의심됩니다.</p></li>
+                    <li><p>2021.12.07 07:04:13</p></li>
                     <li className="buttons">
                       <div>
                       <button className='btn-req' type="button" name="button" onClick={onOkHandler}>승인</button>
@@ -122,13 +109,11 @@ function Request(){
                 </li> 
                 <li>
                   <ul className="ulTable-inside2 ulTable-request"> 
-                    <li><p>4</p></li>
+                    <li><p>9</p></li>
                     <li><p>김나모</p></li>
                     <li><p>상담 요청</p></li>
                     <li><p>사내 따돌림으로 인한 퇴사 상담 요청</p></li>
-                    <li><p>퇴사 상담</p></li>
-                    {/* <li><p>대기중</p></li> */}
-                    <li><p>2021.12.07</p></li>
+                    <li><p>2021.12.07 15:04:32</p></li>
                     <li className="buttons">
                       거절됨
                     </li>
@@ -136,12 +121,10 @@ function Request(){
                 </li> 
                 <li>
                   <ul className="ulTable-inside2 ulTable-request"> 
-                    <li><p>5</p></li>
+                    <li><p>10</p></li>
                     <li><p>정종문</p></li>
                     <li><p>휴가 요청</p></li>
                     <li><p>여행 가고 싶습니다</p></li>
-                    <li><p>연차</p></li>
-                    {/* <li><p>대기중</p></li> */}
                     <li><p>2021.12.06 04:04:49</p></li>
                     <li className="buttons">
                       승인됨
@@ -150,12 +133,10 @@ function Request(){
                 </li> 
                 <li>
                   <ul className="ulTable-inside2 ulTable-request"> 
-                    <li><p>6</p></li>
+                    <li><p>11</p></li>
                     <li><p>박창선</p></li>
                     <li><p>조퇴 요청</p></li>
                     <li><p>개인사정</p></li>
-                    <li><p>반차</p></li>
-                    {/* <li><p>대기중</p></li> */}
                     <li><p>2021.12.06 01:03:29</p></li>
                     <li className="buttons">
                       승인됨
@@ -164,12 +145,10 @@ function Request(){
                 </li>
                 <li>
                   <ul className="ulTable-inside2 ulTable-request"> 
-                    <li><p>7</p></li>
+                    <li><p>12</p></li>
                     <li><p>하혜민</p></li>
                     <li><p>휴가 요청</p></li>
                     <li><p>크리스마스 기간 여행</p></li>
-                    <li><p>연차</p></li>
-                    {/* <li><p>대기중</p></li> */}
                     <li><p>2021.12.06 01:03:29</p></li>
                     <li className="buttons">
                       승인됨
