@@ -11,7 +11,17 @@
   margin-left: 10px;
   border: 1px solid #aaaaaa;
   font-size: 0.9em;
-  background-color: #f5f6f9;
+  background-color: #fde5e5;
+  cursor: pointer;
+}
+
+.btn-req1 {
+  padding: 4px 10px;
+  border-radius: 10px;
+  margin-left: 10px;
+  border: 1px solid #aaaaaa;
+  font-size: 0.9em;
+  background-color: #d9fad9;
   cursor: pointer;
 }
 
@@ -34,4 +44,12 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.rej {
+  color: rgb(186, 48, 48);
+}
+
+.okay {
+  color: rgb(36, 148, 137);
 }

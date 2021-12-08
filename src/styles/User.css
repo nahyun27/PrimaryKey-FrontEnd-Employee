@@ -1,0 +1,7 @@
+.ulTable-user > li              {width:10%;} /*No 열 크기*/
+.ulTable-user > li+li           {width:20%;} /*제목 열 크기*/
+.ulTable-user > li+li+li        {width:20%;} /*작성일 열 크기*/
+.ulTable-user > li+li+li+li     {width:10%;} /*작성자 열 크기*/
+.ulTable-user > li+li+li+li+li  {width:10%;} /*조회수 열 크기*/
+.ulTable-user > li+li+li+li+li+li     {width:20%;} /*작성자 열 크기*/
+.ulTable-user > li+li+li+li+li+li+li  {width:10%;} /*조회수 열 크기*/

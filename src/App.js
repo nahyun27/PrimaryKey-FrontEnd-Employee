@@ -10,7 +10,9 @@ import ScheduleWriting from './pages/ScheduleWriting.jsx';
 import NoticeModify from './pages/NoticeModify.jsx';
 import Meal from './pages/Meal.jsx';
 import Compliment from './pages/Compliment.jsx';
+import User from './pages/User.jsx';
 
+import DetailedUser from './pages/view/DetailedUser.jsx';
 import DetailedReport from './pages/view/DetailedReport.jsx';
 import DetailedNotice from './pages/view/DetailedNotice.jsx';
 
@@ -45,6 +47,7 @@ function App() {
           {isLogin ?
           <Switch>
             <Route path='/Home' exact component={Home} />
+            <Route path='/User' exact component={User} />
             <Route path='/Report' exact component={Report} />
             <Route path='/Request' exact component={Request} />
             <Route path='/Vacation' exact component={Vacation} />
@@ -56,7 +59,7 @@ function App() {
             <Route path='/NoticeWriting' exact component={NoticeWriting} />
             <Route path='/NoticeModify' exact component={NoticeModify} />
             <Route path='/Notice' exact component={Notice} />
-
+            <Route path='/DetailedUser' exact component={DetailedUser} />
             <Route path='/DetailedReport' exact component={DetailedReport} />
             <Route path='/DetailedNotice' exact component={DetailedNotice} />
 

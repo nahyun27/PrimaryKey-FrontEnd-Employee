@@ -33,10 +33,10 @@ const RequestList = ({posts, loading}) => {
               <li><p>{getDateStringGMT9(new Date(posts[i].created_at))}</p></li>
               {!(posts[i].is_approved)? <li className="buttons">
                 <div>
-                <button className='btn-req' type="button" name="button" onClick={onOkHandler}>승인</button>
+                <button className='btn-req1' type="button" name="button" onClick={onOkHandler}>승인</button>
                 <button className='btn-req' type="button" name="button" onClick={onNoHandler}>거절</button>
                 </div>
-              </li>: <li><p>승인됨</p></li>}
+              </li>: <li><p className="okay">승인됨</p></li>}
             </ul>
           </li> 
         </NavLink>

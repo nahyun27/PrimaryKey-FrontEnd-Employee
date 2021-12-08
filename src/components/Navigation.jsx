@@ -27,6 +27,7 @@ function Navigation(props) {
         </div>
         <ul className="navbar__menu">
           <li><NavLink exact to="/Home">출퇴근 관리</NavLink></li>
+          <li><NavLink exact to="/User">직원 정보</NavLink></li>
           <li><NavLink exact to="/Request">요청 관리</NavLink></li>
           <li><NavLink exact to="/Vacation">휴가 관리</NavLink></li>
           <li><NavLink exact to="/Schedule">직원 스케줄 관리</NavLink></li>
@@ -49,6 +50,7 @@ function Navigation(props) {
         <div className="sidebar">
           <ul className="sidebar__menu">
             <li><NavLink exact to="/Home">출퇴근 관리</NavLink></li>
+          <li><NavLink exact to="/User">직원 정보</NavLink></li>
             <li><NavLink to="/Request">요청 관리</NavLink></li>
             <li><NavLink to="/Vacation">휴가 관리</NavLink></li>
             <li><NavLink to="/Schedule">직원 스케줄 관리</NavLink></li>

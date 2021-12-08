@@ -15,7 +15,7 @@ function NoticeModify (props) {
 
   const onSubmitHandler = () => {
     fetch('http://admin.primarykey.shop:3000/service/notice/'+ props.location.aboutProps.post.employee_notice_id, {
-      method: 'POST',
+      method: 'PATCH',
       headers : new Headers({
         'Content-Type': 'application/json',
         'Authorization' : sessionStorage.getItem("login_token")
@@ -33,7 +33,7 @@ function NoticeModify (props) {
       alert('공지사항이 수정되었습니다.')
     })
     .catch((error) => {
-      console.log(errorㅁa)
+      console.log(error)
     })
   }
   

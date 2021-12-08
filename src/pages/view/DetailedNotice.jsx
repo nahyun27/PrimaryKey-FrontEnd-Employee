@@ -29,17 +29,17 @@ const DeteiledNotice = (props) => {
         <div className="writing-box">
           <div className="main-info">
             <div className="title-info">
-              <h3>제목</h3>
-              <hr/>
-              <div className="title-content" dangerouslySetInnerHTML={ {__html: data.notice_title}}></div>
               <div className="info-table">
                 <li className="col">작성자</li>
                 <li className="name-info"><p>{data.notice_writer}</p></li>
                 <li className="col">작성일</li>
                 <li><p>{getDateStringGMT9(new Date(data.created_at))}</p></li>
                 <li className="col">수정일</li>
-                <li className="end"><p>{(data.updated_at == (data.created_at))? "아직 수정되지 않았습니다." :getDateStringGMT9(new Date(data.updated_at))}</p></li>
+                <li className="end"><p>{(data.updated_at == (data.created_at))? "아직 수정되지 않았습니다. Z" :getDateStringGMT9(new Date(data.updated_at))}</p></li>
               </div>
+              <h3>제목</h3>
+              <hr/>
+              <div className="title-content" dangerouslySetInnerHTML={ {__html: data.notice_title}}></div>
             </div>
             <div className="article-info">
               <h3>내용</h3>

@@ -23,9 +23,6 @@ const DeteiledReport = (props) => {
         <div className="writing-box">
           <div className="main-info">
             <div className="title-info">
-              <h3>제목</h3>
-              <hr/>
-              <div className="title-content" dangerouslySetInnerHTML={ {__html: data.title}}></div>
               <div className="info-table">
                 <li className="col">작성자</li>
                 <li className="name-info"><p>{data.employee_id}</p></li>
@@ -34,6 +31,10 @@ const DeteiledReport = (props) => {
                 <li className="col">수정일</li>
                 <li className="end"><p>{getDateStringGMT9(new Date(data.updated_at))}</p></li>
               </div>
+              <h3>제목</h3>
+              <hr/>
+              <div className="title-content" dangerouslySetInnerHTML={ {__html: data.title}}></div>
+              
             </div>
             <div className="article-info">
               <h3>내용</h3>

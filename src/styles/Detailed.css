@@ -45,8 +45,8 @@
   justify-content: space-between;
 }
 .img-box {
-  width: 160px;
-  height: 160px; 
+  width: 200px;
+  height: 200px; 
   border-radius: 70%;
   overflow: hidden;
   border: solid;
@@ -62,7 +62,8 @@
 .title-content {
   width: 100%;
   padding-bottom: 10px;
-  font-size: 1.1em;
+  font-size: 1.2em;
+  font-weight: 500;
 }
 
 .info-table {
@@ -108,6 +109,12 @@ hr {
   height: 700px;
 }
 
+.main-info1 {
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+}
+
 .information {
   display: flex;
   flex-direction: column;
@@ -133,6 +140,14 @@ hr {
   margin-bottom: 30px;
 }
 
+.title-info > h3 {
+  margin-top: 25px;
+}
+
+.information >h3 {
+  font-size: 1.4em;
+}
+
 .article-info {
   margin-top: 15px;
   min-height: 600px;
@@ -143,6 +158,8 @@ hr {
 
 
 .article-content{
-  font-size: 1em;
+  font-size: 1.1em;
+  align-self: flex-start;
+  
 }
 
