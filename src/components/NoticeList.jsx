@@ -17,10 +17,10 @@ const NoticeList = ({posts, loading}) => {
           <li key={posts[i].employee_notice_id}>
             <ul className="ulTable-inside ulTable-notice"> 
               <li>{posts[i].employee_notice_id}</li>
-              <li>{posts[i].notice_title}</li>
+              <li>{(posts[i].notice_title)? posts[i].notice_title : "(제목이 없습니다.)"}</li>
               <li>{getDateStringGMT9(new Date(posts[i].created_at))}</li>
               <li>{posts[i].notice_writer}</li>
-              <li>{posts[i].view_count}</li>
+              <li>{(posts[i].view_count)? posts[i].view_count:'0'}</li>
             </ul>
           </li> 
         </NavLink>

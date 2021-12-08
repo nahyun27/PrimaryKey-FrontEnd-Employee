@@ -14,11 +14,11 @@ function Vacation(){
 
   useEffect(() => {
     const fetchPosts = async () => {
-      const res = await axios.get('http://admin.primarykey.shop:3000/check/now', { 
+      const res = await axios.get('http://admin.primarykey.shop:3000/check/leave/list', { 
         headers: { Authorization: sessionStorage.getItem("login_token")}
       })
 
-      var data_ = res.data.statuslist
+      var data_ = res.data.leave
       setPosts(data_);
     }
 
@@ -63,11 +63,10 @@ function Vacation(){
                   <ul className="ulTable-inside ulTable-vacation">
                     <li>휴가 번호</li>
                     <li>직원명</li>
+                    <li>유형</li>
                     <li>휴가 시작일시</li>
                     <li>휴가 종료일시</li>
-                    <li>휴가 신청일</li>
                     <li>상태</li>
-                    <li>유형</li>
                   </ul>
                 </li>
                 <VacationList posts={currentPosts}/>

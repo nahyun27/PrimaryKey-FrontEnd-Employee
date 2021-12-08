@@ -2,6 +2,5 @@
 .ulTable-vacation > li+li                 {width:15%;} /*요청 종류 열 크기*/
 .ulTable-vacation > li+li+li              {width:20%;} /*요청 사항 크기*/
 .ulTable-vacation > li+li+li+li           {width:20%;} /*요청 사유 크기*/
-.ulTable-vacation > li+li+li+li+li        {width:10%;} /*상태 크기*/
+.ulTable-vacation > li+li+li+li+li        {width:20%;} /*상태 크기*/
 .ulTable-vacation > li+li+li+li+li+li     {width:15%;} /*신청일자 크기*/
-.ulTable-vacation > li+li+li+li+li+li+li  {width:10%;} /*관리 크기*/

@@ -14,14 +14,14 @@ const VacationList = ({posts}) => {
           }
         }}
         exact>
-          <li key={posts[i].holiday_id}>
-            <ul className="ulTable-inside ulTable-request"> 
-              <li>{posts[i].holiday_id}</li>
-              <li>{posts[i].description}</li>
+          <li key={posts[i].leave_id}>
+            <ul className="ulTable-inside ulTable-vacation"> 
+              <li>{posts[i].leave_id}</li>
               <li>{posts[i].employee.name}</li>
-              <li>{posts[i].request_type}</li>
+              <li>{posts[i].leave_type}</li>
               <li>{getDateStringGMT9(new Date(posts[i].start_date))}</li>
               <li>{getDateStringGMT9(new Date(posts[i].end_date))}</li>
+              <li>승인됨</li>
             </ul>
           </li> 
         </NavLink>

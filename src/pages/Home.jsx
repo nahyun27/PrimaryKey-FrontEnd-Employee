@@ -65,15 +65,15 @@ function Home(){
                         <li>1/수</li>
                         <li>2/목</li>
                         <li>3/금</li>
-                        <li>4/토</li>
-                        <li>5/일</li>
+                        <li className="sat">4/토</li>
+                        <li className="sun">5/일</li>
                         <li>6/월</li>
                         <li>7/화</li>
                         <li>8/수</li>
                         <li>9/목</li>
                         <li>10/금</li>
-                        <li>11/토</li>
-                        <li>12/일</li>
+                        <li className="sat">11/토</li>
+                        <li className="sun">12/일</li>
                       </ul>
                   </li>
                   <li>
@@ -100,15 +100,15 @@ function Home(){
                         <li>9:44<br/>19:29</li>
                         <li>8:53<br/>18:59</li>
                         <li>8:50<br/>19:11</li>
-                        <li>8:59<br/>18:49</li>
-                        <li>9:02<br/>19:00</li>
+                        <li className="vac1">연차<br/>휴가</li>
+                        <li className="vac1">연차<br/>휴가</li>
                         <li><br/></li>
                         <li><br/></li>
                         <li>8:39<br/>19:15</li>
                         <li>9:00<br/>19:01</li>
                         <li>9:01<br/>19:11</li>
-                        <li className="vac1">연차<br/>휴가</li>
-                        <li className="vac1">연차<br/>휴가</li>
+                        <li>8:59<br/>18:49</li>
+                        <li>9:02<br/>19:00</li>
                         <li><br/></li>
                         <li><br/></li>
                       </ul>
@@ -214,11 +214,11 @@ function Home(){
                         <li>9:44<br/>19:29</li>
                         <li>8:53<br/>?</li>
                         <li>8:50<br/>19:11</li>
-                        <li className="absent">결근</li>
+                        <li>8:39<br/>19:15</li>
                         <li>9:02<br/>19:00</li>
                         <li><br/></li>
                         <li><br/></li>
-                        <li>8:39<br/>19:15</li>
+                        <li className="absent">결근</li>
                         <li>9:00<br/>19:01</li>
                         <li>9:01<br/>19:11</li>
                         <li>8:30<br/>19:21</li>
@@ -250,8 +250,8 @@ function Home(){
                       <ul className="ulTable-inside1">
                         <li className="name">정종문</li>
                         <li>9:44<br/>19:29</li>
-                        <li className="vac1">연차<br/>휴가</li>
-                        <li className="vac1">연차<br/>휴가</li>
+                        <li>8:53<br/>18:59</li>
+                        <li>8:50<br/>19:11</li>
                         <li>8:59<br/>18:49</li>
                         <li>9:02<br/>19:00</li>
                         <li><br/></li>

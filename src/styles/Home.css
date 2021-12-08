@@ -17,9 +17,10 @@
 
 .ulTable-inside1 > li {
   width:6.5%;
-  font-weight: lighter;
+  font-weight: 400;
   float: left;
   font-size: 1em;
+  color: #444444;
   border-bottom : 1px solid #aaaaaa;
   border-right : 1px solid #aaaaaa;
   padding-top: 10px;
@@ -39,7 +40,11 @@
   width:6.5%;
 }
 
-.name {
+.ulTable-inside1 .name {
+  width:9%;
+  border-left : 1px solid #aaaaaa;
+}
+.table-head .name {
   width:9%;
   border-left : 1px solid #aaaaaa;
 }
@@ -64,6 +69,23 @@
   white-space: nowrap;
 }
 
-.vac1 {
-  background-color: rgb(245, 255, 235);
+.ulTable-inside1 .vac1 {
+  background-color: rgb(238, 255, 221);
+  color: rgb(27, 59, 27);
+  font-weight: 500;
+
+}
+
+.ulTable-inside1 .absent {
+  background-color: rgb(255, 222, 222);
+  color: rgb(59, 27, 27);
+  font-weight: 500;
+}
+
+.ulTable > li:first-child > ul  .sat {
+  color: rgb(51, 51, 240);
+}
+
+.ulTable > li:first-child > ul .sun {
+  color: rgb(240, 51, 51);
 }

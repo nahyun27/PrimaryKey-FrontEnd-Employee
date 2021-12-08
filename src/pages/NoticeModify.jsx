@@ -5,7 +5,7 @@ import React, { useState} from 'react';
 import { CKEditor } from '@ckeditor/ckeditor5-react';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 
-function NoticeWriting (props) {
+function NoticeModify (props) {
   const [inputTitle, setInputTitle] = useState('')
   const [inputText, setInputText] = useState('')
 
@@ -14,33 +14,26 @@ function NoticeWriting (props) {
   }
 
   const onSubmitHandler = () => {
-    console.log(props.location.aboutProps.post.id);
-    console.log('title', inputTitle);
-    console.log('article', inputText);
-
-    fetch('https://goote.dev/v1/cs/notice/update', {
+    fetch('http://admin.primarykey.shop:3000/service/notice', {
       method: 'POST',
       headers : new Headers({
         'Content-Type': 'application/json',
         'Authorization' : sessionStorage.getItem("login_token")
       }),
       body : JSON.stringify({
-        notice_id: props.location.aboutProps.post.id,
-        title: inputTitle,
-        article: inputText
+        notice_title: inputTitle,
+        notice_content: inputText,
+        notice_writer: "김나현"
       })
     })
     .then((response) => response.json())
     .then((res) => {
-      console.log(res)
-      if(res.status === 200) {
-        props.history.push('/Notice')             //리액트에서 페이지 이동하기 위해서는 props.history.push() 이용.
-      } else{
-        alert('공지사항 등록에 실패하였습니다.')
-      }
+      console.log("성공!", res)
+      props.history.push('/Notice')  
+      alert('공지사항이 등록되었습니다.')
     })
   }
-  {console.log(props.location.aboutProps.post.article)}
+  
   return(
     <div className="NoticeWriting">
       <div className="container">
@@ -49,7 +42,7 @@ function NoticeWriting (props) {
         <form className="writing-box" id="form_test" action="insertTest.do" method="post" encType="multipart/form-data">
           <div className="elem">
             <h3>제목</h3>
-            <input type="text" placeholder="제목을 입력하세요." name="Title" className="form-control" defaultValue={props.location.aboutProps.post.title} onChange={handleInputTitle} required />
+            <input type="text" placeholder="제목을 입력하세요." name="Title" className="form-control" defaultValue={props.location.aboutProps.post.notice_title} onChange={handleInputTitle} required />
           </div>
 
           <div className="elem">
@@ -61,7 +54,7 @@ function NoticeWriting (props) {
             <h3>내용</h3>
             <CKEditor
               editor={ ClassicEditor }
-              data={props.location.aboutProps.post.article}
+              data={props.location.aboutProps.post.notice_content}
               onReady={ editor => {
                   // You can store the "editor" and use when it is needed.
                   console.log( 'Editor is ready to use!', editor );
@@ -104,4 +97,4 @@ function NoticeWriting (props) {
   );
 }
 
-export default NoticeWriting;
+export default NoticeModify;

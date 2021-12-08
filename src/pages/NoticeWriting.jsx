@@ -16,25 +16,23 @@ function NoticeModify (props) {
   }
 
   const onSubmitHandler = () => {
-    fetch('https://goote.dev/v1/cs/notice/create', {
+    fetch('http://admin.primarykey.shop:3000/service/notice', {
       method: 'POST',
       headers : new Headers({
         'Content-Type': 'application/json',
         'Authorization' : sessionStorage.getItem("login_token")
       }),
       body : JSON.stringify({
-        title: inputTitle,
-        article: inputText
+        notice_title: inputTitle,
+        notice_content: inputText,
+        notice_writer: "김나현"
       })
     })
     .then((response) => response.json())
     .then((res) => {
-      console.log(res)
-      if(res.status === 200) {
-        props.history.push('/Notice')  
-      } else{
-        alert('공지사항 등록에 실패하였습니다.')
-      }
+      console.log("성공!", res)
+      props.history.push('/Notice')  
+      alert('공지사항이 등록되었습니다.')
     })
   }
   

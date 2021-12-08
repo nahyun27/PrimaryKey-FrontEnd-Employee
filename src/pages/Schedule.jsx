@@ -118,7 +118,11 @@ function Schedule(){
                     <li></li>
                     <li></li>
                     <li></li>
-                    <li className="blank5">2:00 PM ~ 8:00 PM @경영본부 전략기획팀</li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
                     <li></li>
                     <li></li>
                     <li></li>
@@ -160,13 +164,67 @@ function Schedule(){
                 </li>
                 <li>
                   <ul className="ulTable-inside1 ulTable-schedule">
+                    <li className="name">김철수</li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                  </ul>
+                </li>
+                <li>
+                  <ul className="ulTable-inside1 ulTable-schedule">
                     <li className="name">홍길동</li>
-                    <li className="blank-all">연차</li>
+                    <li className="blank-all">연차(1/2)</li>
                   </ul>
                 </li>
                 <li>
                   <ul className="ulTable-inside1 ulTable-schedule">
                     <li className="name">이용현</li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                  </ul>
+                </li>
+                <li>
+                  <ul className="ulTable-inside1 ulTable-schedule">
+                    <li className="name">김나모</li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li className="blank4">1:00 PM ~ 5:00 PM 정기교육</li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                  </ul>
+                </li>
+                <li>
+                  <ul className="ulTable-inside1 ulTable-schedule">
+                    <li className="name">김영희</li>
                     <li></li>
                     <li></li>
                     <li></li>
