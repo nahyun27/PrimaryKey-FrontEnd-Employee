@@ -23,7 +23,7 @@ const DeteiledReport = (props) => {
         <div className="writing-box">
           <div className="main-info">
             <div className="title-info">
-              <div className="info-table">
+              npm<div className="info-table">
                 <li className="col">작성자</li>
                 <li className="name-info"><p>{data.employee_id}</p></li>
                 <li className="col">작성일</li>

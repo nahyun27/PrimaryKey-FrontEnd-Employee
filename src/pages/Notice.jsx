@@ -10,7 +10,7 @@ import axios from 'axios';
 function Notice(){
   const [posts, setPosts] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const [postPerPage] = useState(15);
+  const [postPerPage] = useState(14);
 
   useEffect(() => {
     const fetchPosts = async () => {
